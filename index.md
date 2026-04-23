@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 
 ## Hi, I'm Sunbla Khan 👋
