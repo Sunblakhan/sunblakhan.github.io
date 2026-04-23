@@ -7,14 +7,3 @@ plugins:
 
 github_username: sunblakhan
 show_downloads: false
-
-# Navigation menu
-header_pages:
-  - aboutme.md
-  - skills.md
-  - projects.md
-  - education.md
-  - freelancing.md
-  - personality.md
-  - blog.md
-  - contactme.md
