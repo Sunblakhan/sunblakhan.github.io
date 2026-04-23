@@ -1,15 +1,20 @@
 ---
-layout: default
 title: Personality
 permalink: /personality/
 ---
 
-# 🙂 Personality
+# Personality and Work Approach
 
-Beyond the code, here's a bit about who I am:
+I value thoughtful execution and consistent delivery. I like solving messy problems by
+breaking them into clear, testable parts.
 
-- 🎯 I enjoy solving complex problems and finding elegant solutions
-- 📚 Lifelong learner — always exploring new tech and ideas
-- 🌍 Multilingual — [your languages]
-- 🎮 Hobbies: [e.g. chess, hiking, gaming, reading]
-- 💬 I value collaboration, curiosity, and continuous growth
+## Strengths
+- Analytical and detail-oriented
+- Calm under pressure
+- Collaborative and feedback-friendly
+- Focused on outcomes, not just outputs
+
+## Professional Values
+- Clarity in communication
+- Ownership from planning to delivery
+- Continuous learning and adaptation

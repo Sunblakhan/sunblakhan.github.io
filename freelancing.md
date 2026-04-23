@@ -1,17 +1,13 @@
 ---
-layout: default
 title: Freelancing
 permalink: /freelancing/
 ---
 
-# 💼 Freelancing Projects
+# Freelancing
 
-## AI Agent Development
-Description of the kind of AI agent work you do — tools, clients, outcomes.
+I support founders and teams with:
+- Data reporting and pipeline setup
+- CRM and process automation
+- Workflow optimization for sales and customer operations
 
-## Project/Client 1
-**Type:** [Web Dev / Automation / Data Analysis]  
-What you built and what value it delivered.
-
-## Project/Client 2
-Description here.
+If you have a project in mind, reach out from the [Contact page]({{ '/contactme/' | relative_url }}).

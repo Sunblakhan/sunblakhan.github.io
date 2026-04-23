@@ -1,17 +1,18 @@
 ---
-layout: default
 title: Education
 permalink: /education/
 ---
 
-# 🎓 Education
+# Education
 
-## B.Sc. Data Science
-**Berliner Hochschule für Technik (BHT), Berlin** — *(in progress)*  
-Relevant coursework: Machine Learning, Statistics, Data Engineering, [add more]
+<div class="card">
+  <h3>Master's in Data Science</h3>
+  <p class="meta">BHT Berlin, Germany</p>
+  <p>Advanced study in data science, analytics, and applied modeling.</p>
+</div>
 
-## Previous Education
-[Any previous degrees, diplomas, certifications]
-
-## Certifications
-- [e.g. AWS Cloud Practitioner, DeepLearning.AI, etc.]
+<div class="card">
+  <h3>Bachelor's in Software Engineering</h3>
+  <p class="meta">MAJU, Karachi</p>
+  <p>Foundation in software design, programming, and systems development.</p>
+</div>

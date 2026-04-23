@@ -1,9 +1,33 @@
-title: "Sunbla Khan | Data Scientist & Software Engineer"
-description: "Bridging Software Engineering and Data Science to build intelligent, automated solutions."
-remote_theme: pages-themes/slate@v0.2.0
+title: Sunbla Khan
+email: sunblakhan7589@gmail.com
+description: Personal portfolio, blog, and contact hub of Sunbla Khan.
+baseurl: ""
+url: "https://sunblakhan.github.io"
+markdown: kramdown
+permalink: /blog/:title/
 
 plugins:
-  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
 
-github_username: sunblakhan
-show_downloads: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+nav_pages:
+  - title: About
+    url: /aboutme/
+  - title: Skills
+    url: /skills/
+  - title: Education
+    url: /education/
+  - title: Portfolio
+    url: /projects/
+  - title: Personality
+    url: /personality/
+  - title: Blog
+    url: /blog/
+  - title: Contact
+    url: /contactme/

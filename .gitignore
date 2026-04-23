@@ -1,0 +1,14 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+.DS_Store
+Thumbs.db
+.env
+*.log
+Include/
+Lib/
+Scripts/
+pyvenv.cfg
