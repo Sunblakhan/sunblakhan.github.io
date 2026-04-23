@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
   </head>
   <body>
-    {% include nav.html %}
-
-    <main class="container content-area">
-      {{ content }}
-    </main>
+    <div class="site-shell">
+      {% include nav.html %}
+      <main class="content-area">
+        <div class="content-inner">
+          {{ content }}
+        </div>
+      </main>
+    </div>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
+      <div class="content-inner footer-inner">
         <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}</p>
         <p>Built with Jekyll and GitHub Pages</p>
       </div>
