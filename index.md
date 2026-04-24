@@ -19,7 +19,7 @@ title: Home
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <img src="https://static.topmate.io/profile_pic_40400ba6-0874-4d51-984b-f5f0099267c0.jpeg" alt="Sunbla Khan profile photo" class="hero-photo" />
+      <img src="https://avatars.githubusercontent.com/u/82757563?v=4" alt="Sunbla Khan profile photo" class="hero-photo" />
     </div>
   </div>
 </section>
