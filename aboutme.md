@@ -6,19 +6,22 @@ permalink: /aboutme/
 # About Me
 
 I am **Sunbla Khan**, a Data Science Master's student at BHT Berlin and an automation-focused
-operations professional with 3+ years of international experience.
+operations specialist with 3+ years of international experience.
 
-I specialize in connecting analytics with real-world execution:
-- Workflow automation for support, onboarding, and lead handling
-- Data analysis and business intelligence for decision-making
-- Scalable process design using SOPs and systems thinking
+I work at the intersection of data, AI, and operations. My goal is simple: build systems that make
+teams faster, decisions smarter, and delivery more consistent.
+
+## What I Bring
+- Automation systems for support, onboarding, and lead management
+- Applied analytics and BI for operational decision-making
+- SOP-driven process design for scalability and team clarity
 
 ## Core Highlights
-- Automated up to 80% of routine customer queries using AI chatbot workflows.
-- Improved onboarding turnaround by 50% through cross-tool automation pipelines.
-- Built 25+ SOPs and helped reduce team training time by 40%.
-- Worked with global teams across education, SaaS, and operations-focused environments.
+- Automated up to 80% of routine customer queries using AI-assisted workflows.
+- Reduced onboarding turnaround by 50% with cross-platform automation pipelines.
+- Built 25+ SOPs and helped cut training time by 40%.
+- Delivered results across international education and SaaS operations teams.
 
-## Career Direction
-I am currently focused on roles and projects across Data Science, AI-powered automation,
-business operations optimization, and applied analytics in Germany and remote-first teams.
+## Current Direction
+I am currently focused on Data Science and AI Automation roles, especially opportunities where I can
+combine technical execution with process optimization for real business outcomes.

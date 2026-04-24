@@ -5,7 +5,7 @@ permalink: /contactme/
 
 # Contact
 
-I am open to collaborations, freelance opportunities, and data/automation projects.
+Open for freelance projects, consulting, and collaborations in AI automation, data analytics, and process optimization.
 
 - **Email:** [sunblakhan7589@gmail.com](mailto:sunblakhan7589@gmail.com)
 - **LinkedIn:** [sunbla-khan-6a1920172](https://www.linkedin.com/posts/sunbla-khan-6a1920172)

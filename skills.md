@@ -5,6 +5,8 @@ permalink: /skills/
 
 # Skills and Tools
 
+<p class="meta">A practical stack built through hands-on delivery in automation, analytics, and operations.</p>
+
 <div class="skills-grid">
   <article class="skill-card">
     <h3>Data Science</h3>
