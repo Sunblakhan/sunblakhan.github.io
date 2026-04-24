@@ -11,6 +11,8 @@ I am open to collaborations, freelance opportunities, and data/automation projec
 - **LinkedIn:** [sunbla-khan-6a1920172](https://www.linkedin.com/posts/sunbla-khan-6a1920172)
 - **Instagram:** [@imsunbla.khan](https://www.instagram.com/imsunbla.khan/)
 - **Upwork:** [Freelancer Profile](https://www.upwork.com/freelancers/~0194eb36fd4f252888)
+- **Topmate:** [Book a Consultation](https://topmate.io/sunbla_khan)
+- **GitHub:** [Sunblakhan](https://github.com/Sunblakhan)
 - **GitLab:** [BHT Snippets](https://gitlab.bht-berlin.de/users/fbtg6516/snippets)
 
 ## Contact Form

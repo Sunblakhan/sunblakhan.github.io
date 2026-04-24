@@ -19,6 +19,8 @@ defaults:
 nav_pages:
   - title: About
     url: /aboutme/
+  - title: Experience
+    url: /experience/
   - title: Skills
     url: /skills/
   - title: Education
