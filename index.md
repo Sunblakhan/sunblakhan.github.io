@@ -3,31 +3,34 @@ title: Home
 ---
 
 <section class="hero">
-  <span class="tag">Available for freelance and collaboration</span>
-  <h1>Sunbla Khan</h1>
-  <p>
-    I help teams scale operations with AI automation, data analytics, and process systems that are designed
-    to be practical, measurable, and easy to maintain.
-  </p>
-  <div class="actions">
-    <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Portfolio</a>
-    <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/~0194eb36fd4f252888" target="_blank" rel="noopener noreferrer">Hire on Upwork</a>
-    <a class="btn btn-ghost" href="{{ '/contactme/' | relative_url }}">Contact Me</a>
-  </div>
-  <div class="social-actions">
-    <a class="btn btn-social" href="https://www.linkedin.com/posts/sunbla-khan-6a1920172" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a class="btn btn-social" href="https://www.instagram.com/imsunbla.khan/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a class="btn btn-social" href="https://github.com/Sunblakhan" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a class="btn btn-social" href="https://gitlab.bht-berlin.de/users/fbtg6516/snippets" target="_blank" rel="noopener noreferrer">GitLab</a>
-    <a class="btn btn-social" href="https://topmate.io/sunbla_khan" target="_blank" rel="noopener noreferrer">Book on Topmate</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <span class="tag">Available for freelance and collaboration</span>
+      <h1>Sunbla Khan</h1>
+      <p>
+        I help teams scale operations with AI automation, data analytics, and process systems that are designed
+        to be practical, measurable, and easy to maintain.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="{{ '/projects/' | relative_url }}">View Portfolio</a>
+        <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/~0194eb36fd4f252888" target="_blank" rel="noopener noreferrer">Hire on Upwork</a>
+        <a class="btn btn-ghost" href="https://topmate.io/sunbla_khan" target="_blank" rel="noopener noreferrer">Book on Topmate</a>
+        <a class="btn btn-ghost" href="{{ '/contactme/' | relative_url }}">Contact Me</a>
+      </div>
+      <div class="social-actions">
+        <a class="btn btn-social" href="https://www.linkedin.com/posts/sunbla-khan-6a1920172" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        <a class="btn btn-social" href="https://www.instagram.com/imsunbla.khan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">ig</a>
+        <a class="btn btn-social" href="https://github.com/Sunblakhan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">gh</a>
+        <a class="btn btn-social" href="https://gitlab.bht-berlin.de/users/fbtg6516/snippets" target="_blank" rel="noopener noreferrer" aria-label="GitLab">gl</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="https://static.topmate.io/profile_pic_40400ba6-0874-4d51-984b-f5f0099267c0.jpeg" alt="Sunbla Khan profile photo" class="hero-photo" />
+    </div>
   </div>
 </section>
 
 <section class="profile-panel">
-  <div class="profile-photo-wrap">
-    <img src="https://static.topmate.io/profile_pic_40400ba6-0874-4d51-984b-f5f0099267c0.jpeg" alt="Sunbla Khan profile photo" class="profile-photo" />
-    <p class="meta">Using your Topmate profile image. You can replace it with a local file at <code>assets/images/profile.jpg</code>.</p>
-  </div>
   <div class="profile-copy">
     <h2>Professional Snapshot</h2>
     <p>Master's candidate in Data Science at BHT Berlin, with a Software Engineering background from MAJU.</p>
