@@ -56,6 +56,36 @@ title: Home
   </div>
 </section>
 
+<section class="testimonials">
+  <h2>Verified Testimonials</h2>
+  <div class="testimonials-grid">
+    <article class="testimonial-card">
+      <p class="testimonial-text">"Working with Sunbla is a no-brainer. As a US-based company, key to me was deep understanding of my brand and audience. Sunbla exceeded expectations and delivered beautifully edited content that tells our story exactly how we imagined it. <strong>I would not hesitate to hire her again.</strong>"</p>
+      <p class="testimonial-source">- Upwork Review (5.0)</p>
+    </article>
+    <article class="testimonial-card">
+      <p class="testimonial-text">"Sun is a standout developer, virtual associate and brings a can-do attitude to every project and initiative. <strong>Highly recommends.</strong>"</p>
+      <p class="testimonial-source">- Upwork Review</p>
+    </article>
+    <article class="testimonial-card">
+      <p class="testimonial-text">"I had the pleasure of working closely with Sunbla Khan during my time at Kiddy School, and I cannot speak highly enough about her guidance and mentorship. Sunbla consistently demonstrated exceptional leadership and commitment to team growth."</p>
+      <p class="testimonial-source">- Inayat Fatima Qureshi, AI Ops Consultant (LinkedIn)</p>
+    </article>
+    <article class="testimonial-card">
+      <p class="testimonial-text">"I had the pleasure of working with Sunbla in 2021 while supporting an e-commerce company. She handled administrative tasks, customer support, and e-commerce operations with efficiency and professionalism. <strong>I highly recommend her.</strong>"</p>
+      <p class="testimonial-source">- Debbica Anna Nelmida (LinkedIn)</p>
+    </article>
+    <article class="testimonial-card">
+      <p class="testimonial-text">"Sunbla is proactive, stays ahead of industry trends, and is a problem-solver with a passion for continuous learning. Her integrity, reliability, and positive attitude make her a pleasure to work with."</p>
+      <p class="testimonial-source">- Olga Ushkova, Account Manager (LinkedIn)</p>
+    </article>
+    <article class="testimonial-card">
+      <p class="testimonial-text">"I've worked with Sunbla for a little under a year. She helped with customer support, outreach, and content tasks, while handling team management responsibilities. <strong>She's responsive, responsible, and professional.</strong>"</p>
+      <p class="testimonial-source">- Uwe Dreissigacker (LinkedIn)</p>
+    </article>
+  </div>
+</section>
+
 <section class="viz-section">
   <h2>Skills Distribution</h2>
   <p class="meta">A two-layer view of my profile: software-engineering foundation plus data-science growth.</p>
@@ -162,7 +192,7 @@ title: Home
     <article class="stack-col">
       <h3>Visualization & BI</h3>
       <div class="stack-list">
-        <span class="stack-pill">Power BI (Incoming)</span>
+        <span class="stack-pill">Power BI</span>
         <span class="stack-pill">Tableau</span>
         <span class="stack-pill">Data Visualization</span>
         <span class="stack-pill">Streamlit</span>
@@ -170,37 +200,6 @@ title: Home
       </div>
     </article>
   </div>
-  </div>
-</section>
-
-
-<section class="testimonials">
-  <h2>Verified Testimonials</h2>
-  <div class="testimonials-grid">
-    <article class="testimonial-card">
-      <p class="testimonial-text">"Working with Sunbla is a no-brainer. As a US-based company, key to me was deep understanding of my brand and audience. Sunbla exceeded expectations and delivered beautifully edited content that tells our story exactly how we imagined it. <strong>I would not hesitate to hire her again.</strong>"</p>
-      <p class="testimonial-source">- Upwork Review (5.0)</p>
-    </article>
-    <article class="testimonial-card">
-      <p class="testimonial-text">"Sun is a standout developer, virtual associate and brings a can-do attitude to every project and initiative. <strong>Highly recommends.</strong>"</p>
-      <p class="testimonial-source">- Upwork Review</p>
-    </article>
-    <article class="testimonial-card">
-      <p class="testimonial-text">"I had the pleasure of working closely with Sunbla Khan during my time at Kiddy School, and I cannot speak highly enough about her guidance and mentorship. Sunbla consistently demonstrated exceptional leadership and commitment to team growth."</p>
-      <p class="testimonial-source">- Inayat Fatima Qureshi, AI Ops Consultant (LinkedIn)</p>
-    </article>
-    <article class="testimonial-card">
-      <p class="testimonial-text">"I had the pleasure of working with Sunbla in 2021 while supporting an e-commerce company. She handled administrative tasks, customer support, and e-commerce operations with efficiency and professionalism. <strong>I highly recommend her.</strong>"</p>
-      <p class="testimonial-source">- Debbica Anna Nelmida (LinkedIn)</p>
-    </article>
-    <article class="testimonial-card">
-      <p class="testimonial-text">"Sunbla is proactive, stays ahead of industry trends, and is a problem-solver with a passion for continuous learning. Her integrity, reliability, and positive attitude make her a pleasure to work with."</p>
-      <p class="testimonial-source">- Olga Ushkova, Account Manager (LinkedIn)</p>
-    </article>
-    <article class="testimonial-card">
-      <p class="testimonial-text">"I've worked with Sunbla for a little under a year. She helped with customer support, outreach, and content tasks, while handling team management responsibilities. <strong>She's responsive, responsible, and professional.</strong>"</p>
-      <p class="testimonial-source">- Uwe Dreissigacker (LinkedIn)</p>
-    </article>
   </div>
 </section>
 
