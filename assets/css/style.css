@@ -674,6 +674,49 @@ label {
   border-color: rgba(244, 114, 182, 0.5);
 }
 
+.about-snapshot {
+  margin: 0.9rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.story-block {
+  margin: 0 0 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(160deg, rgba(23, 16, 35, 0.9), rgba(32, 22, 51, 0.72));
+  overflow: hidden;
+}
+
+.story-block summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.75rem 0.9rem;
+  color: #f8dbff;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+}
+
+.story-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.story-block summary::after {
+  content: "+";
+  float: right;
+  color: #f5b8dc;
+}
+
+.story-block[open] summary::after {
+  content: "-";
+}
+
+.story-block p,
+.story-block ul {
+  margin: 0.75rem 0.9rem;
+}
+
 .evolution-strip {
   margin-top: 0.85rem;
   display: grid;
