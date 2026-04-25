@@ -524,50 +524,29 @@ label {
   margin-top: 1.2rem;
 }
 
-.stack-table {
+.stack-board {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
+}
+
+.stack-col {
   border: 1px solid var(--line);
   border-radius: 12px;
-  overflow: hidden;
+  padding: 0.85rem;
   background: linear-gradient(160deg, rgba(23, 16, 35, 0.9), rgba(32, 22, 51, 0.72));
 }
 
-.stack-row {
-  display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 0.8rem;
-  padding: 0.86rem 0.95rem;
-  border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+.stack-col h3 {
+  margin: 0 0 0.6rem;
+  color: #f8dbff;
+  font-size: 0.94rem;
 }
 
-.stack-row:last-child {
-  border-bottom: none;
-}
-
-.stack-row p {
-  margin: 0;
-  color: #dcc8ef;
-  font-size: 0.92rem;
-}
-
-.stack-head {
-  background: rgba(49, 27, 70, 0.8);
-}
-
-.stack-head p {
-  color: #f8e8ff;
-  font-weight: 600;
-}
-
-.stack-cat {
-  color: #f8dbff !important;
-  font-weight: 700;
-}
-
-@media (max-width: 860px) {
-  .stack-row {
-    grid-template-columns: 1fr;
-  }
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .skills-grid {

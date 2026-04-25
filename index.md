@@ -127,31 +127,77 @@ title: Home
 
 <section class="tech-stack">
   <h2>Tech Stack</h2>
-  <div class="stack-table">
-    <div class="stack-row stack-head">
-      <p>Category</p>
-      <p>Skills & Tools</p>
-    </div>
-    <div class="stack-row">
-      <p class="stack-cat">Data Science & ML</p>
-      <p>Python, R, Scikit-learn, Regression (Linear/Multiple), Classification, K-means, Hierarchical Clustering, PCA, Neural Networks, PyTorch, TensorFlow.</p>
-    </div>
-    <div class="stack-row">
-      <p class="stack-cat">AI & Automation</p>
-      <p>n8n (Advanced AI Workflows), Zapier, ManyChat, OpenAI API, NLP (Transformers), <strong>Agentic Workflows</strong>, HubSpot, Pipedrive.</p>
-    </div>
-    <div class="stack-row">
-      <p class="stack-cat">Engineering & MLOps</p>
-      <p>Java (2 years), SQL (MySQL, OLAP), Docker, Git (GitHub/GitLab), CI/CD, TDD (Testing First), DRY/KISS Principles, PHP, HTML/CSS/JS, <strong>End-to-End MLOps</strong>, <strong>Production-Ready Code</strong>.</p>
-    </div>
-    <div class="stack-row">
-      <p class="stack-cat">Mathematics for AI</p>
-      <p>Linear Algebra (Eigenvectors/Matrices), Calculus, Probability (Normal, Binomial, Uniform), Random Variables, Mathematical Modeling.</p>
-    </div>
-    <div class="stack-row">
-      <p class="stack-cat">Visualization & BI</p>
-      <p>Power BI (Incoming), Tableau, Data Visualization, Streamlit, <strong>Geospatial Analysis</strong> (Berlin EV Charging Project).</p>
-    </div>
+  <div class="stack-board">
+    <article class="stack-col">
+      <h3>Data Science & ML</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">R</span>
+        <span class="stack-pill">Scikit-learn</span>
+        <span class="stack-pill">Regression</span>
+        <span class="stack-pill">Classification</span>
+        <span class="stack-pill">K-means</span>
+        <span class="stack-pill">Hierarchical Clustering</span>
+        <span class="stack-pill">PCA</span>
+        <span class="stack-pill">Neural Networks</span>
+        <span class="stack-pill">PyTorch</span>
+        <span class="stack-pill">TensorFlow</span>
+      </div>
+    </article>
+
+    <article class="stack-col">
+      <h3>AI & Automation</h3>
+      <div class="stack-list">
+        <span class="stack-pill">n8n (Advanced AI Workflows)</span>
+        <span class="stack-pill">Zapier</span>
+        <span class="stack-pill">ManyChat</span>
+        <span class="stack-pill">OpenAI API</span>
+        <span class="stack-pill">NLP (Transformers)</span>
+        <span class="stack-pill">Agentic Workflows</span>
+        <span class="stack-pill">HubSpot</span>
+        <span class="stack-pill">Pipedrive</span>
+      </div>
+    </article>
+
+    <article class="stack-col">
+      <h3>Engineering & MLOps</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Java (2 years)</span>
+        <span class="stack-pill">SQL (MySQL, OLAP)</span>
+        <span class="stack-pill">Docker</span>
+        <span class="stack-pill">Git (GitHub/GitLab)</span>
+        <span class="stack-pill">CI/CD</span>
+        <span class="stack-pill">TDD (Testing First)</span>
+        <span class="stack-pill">DRY/KISS Principles</span>
+        <span class="stack-pill">PHP</span>
+        <span class="stack-pill">HTML/CSS/JS</span>
+        <span class="stack-pill">End-to-End MLOps</span>
+        <span class="stack-pill">Production-Ready Code</span>
+      </div>
+    </article>
+
+    <article class="stack-col">
+      <h3>Mathematics for AI</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Linear Algebra</span>
+        <span class="stack-pill">Eigenvectors/Matrices</span>
+        <span class="stack-pill">Calculus</span>
+        <span class="stack-pill">Probability (Normal/Binomial/Uniform)</span>
+        <span class="stack-pill">Random Variables</span>
+        <span class="stack-pill">Mathematical Modeling</span>
+      </div>
+    </article>
+
+    <article class="stack-col">
+      <h3>Visualization & BI</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Power BI (Incoming)</span>
+        <span class="stack-pill">Tableau</span>
+        <span class="stack-pill">Data Visualization</span>
+        <span class="stack-pill">Streamlit</span>
+        <span class="stack-pill">Geospatial Analysis (Berlin EV Project)</span>
+      </div>
+    </article>
   </div>
 </section>
 
