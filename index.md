@@ -126,6 +126,7 @@ title: Home
 </section>
 
 <section class="tech-stack">
+  <div class="tech-shell">
   <h2>Tech Stack</h2>
   <div class="stack-board">
     <article class="stack-col">
@@ -198,6 +199,7 @@ title: Home
         <span class="stack-pill">Geospatial Analysis (Berlin EV Project)</span>
       </div>
     </article>
+  </div>
   </div>
 </section>
 
