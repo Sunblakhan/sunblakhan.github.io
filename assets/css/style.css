@@ -592,6 +592,88 @@ label {
   margin-top: 0;
 }
 
+.timeline-wrap {
+  position: relative;
+  margin: 1.2rem 0 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(201, 255, 200, 0.35), rgba(192, 132, 252, 0.7), rgba(244, 114, 182, 0.7));
+}
+
+.timeline-item {
+  position: relative;
+  margin-left: 2.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: linear-gradient(160deg, rgba(23, 16, 35, 0.9), rgba(32, 22, 51, 0.72));
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.74rem;
+  top: 1rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid #f8d4ff;
+  background: #6a2ea6;
+}
+
+.timeline-years {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #d7bee8;
+}
+
+.timeline-theme {
+  margin: 0.25rem 0 0.6rem;
+  color: #f5c6e8;
+  font-weight: 600;
+  font-size: 0.93rem;
+}
+
+.timeline-item h3 {
+  margin: 0.35rem 0 0.3rem;
+}
+
+.timeline-item ul {
+  margin: 0.35rem 0 0;
+}
+
+.timeline-note {
+  margin: 0.65rem 0 0;
+  color: #f8d9f0;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.chapter-1 {
+  border-color: rgba(156, 230, 165, 0.35);
+}
+
+.chapter-2 {
+  border-color: rgba(180, 180, 255, 0.35);
+}
+
+.chapter-3 {
+  border-color: rgba(192, 132, 252, 0.45);
+}
+
+.chapter-4 {
+  border-color: rgba(244, 114, 182, 0.5);
+}
+
 .skill-row {
   margin-top: 0.6rem;
   display: flex;
