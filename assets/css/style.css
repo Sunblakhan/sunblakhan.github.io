@@ -572,7 +572,10 @@ label {
   font-size: 0.76rem;
   line-height: 1.2;
   font-weight: 600;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .skills-grid {
