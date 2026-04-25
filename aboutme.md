@@ -87,27 +87,23 @@ I had a cat named Honey. She was part of my life for two years-more like family 
 
 ## Evolution Timeline
 
-<p class="meta">A concise snapshot of how my journey evolved from self-start to data-driven impact.</p>
+<p class="meta">A concise snapshot of my journey from self-start to data-driven impact.</p>
 
-<div class="evolution-strip">
-  <div class="evolution-node">
-    <p class="evolution-year">2018-2020</p>
-    <h3>🌱 Self-Starter</h3>
-    <p>No safety net. Just self-belief.</p>
+<div class="evolution-minimal">
+  <div class="evo-step">
+    <p class="evo-year">2018-2020</p>
+    <h3>Self-Starter</h3>
   </div>
-  <div class="evolution-node">
-    <p class="evolution-year">2020-2023</p>
-    <h3>🛠 Engineer</h3>
-    <p>Structure met execution.</p>
+  <div class="evo-step">
+    <p class="evo-year">2020-2023</p>
+    <h3>Engineer</h3>
   </div>
-  <div class="evolution-node">
-    <p class="evolution-year">2023-2025</p>
-    <h3>⚙️ Automation Architect</h3>
-    <p>From doing tasks to building systems.</p>
+  <div class="evo-step">
+    <p class="evo-year">2023-2025</p>
+    <h3>Automation Architect</h3>
   </div>
-  <div class="evolution-node">
-    <p class="evolution-year">2025-Present</p>
-    <h3>📊 Data Scientist</h3>
-    <p>Clarity through data. Impact at scale.</p>
+  <div class="evo-step">
+    <p class="evo-year">2025-Present</p>
+    <h3>Data Scientist</h3>
   </div>
 </div>
