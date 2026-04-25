@@ -90,38 +90,87 @@ title: Home
   <h2>Skills Distribution</h2>
   <p class="meta">A quick visual summary of my all-rounder capability across Engineering, Data, and Automation.</p>
   <div class="viz-card">
-    <svg class="radar-chart" viewBox="0 0 360 280" role="img" aria-label="Skills distribution radar chart">
-      <polygon points="180,30 300,95 255,235 105,235 60,95" class="radar-ring"></polygon>
-      <polygon points="180,60 270,108 236,214 124,214 90,108" class="radar-ring"></polygon>
-      <polygon points="180,90 240,122 218,194 142,194 120,122" class="radar-ring"></polygon>
-      <polygon points="180,120 210,136 199,173 161,173 150,136" class="radar-ring"></polygon>
+    <div class="radar-wrap">
+      <svg class="radar-chart" viewBox="0 0 420 320" role="img" aria-label="Skills distribution radar chart">
+        <rect x="0" y="0" width="420" height="320" fill="transparent"></rect>
+        <polygon points="210,42 345,118 295,265 125,265 75,118" class="radar-ring"></polygon>
+        <polygon points="210,74 313,131 277,240 143,240 107,131" class="radar-ring"></polygon>
+        <polygon points="210,106 281,144 259,215 161,215 139,144" class="radar-ring"></polygon>
+        <polygon points="210,138 249,157 241,190 179,190 171,157" class="radar-ring"></polygon>
 
-      <line x1="180" y1="145" x2="180" y2="30" class="radar-axis"></line>
-      <line x1="180" y1="145" x2="300" y2="95" class="radar-axis"></line>
-      <line x1="180" y1="145" x2="255" y2="235" class="radar-axis"></line>
-      <line x1="180" y1="145" x2="105" y2="235" class="radar-axis"></line>
-      <line x1="180" y1="145" x2="60" y2="95" class="radar-axis"></line>
+        <line x1="210" y1="160" x2="210" y2="42" class="radar-axis"></line>
+        <line x1="210" y1="160" x2="345" y2="118" class="radar-axis"></line>
+        <line x1="210" y1="160" x2="295" y2="265" class="radar-axis"></line>
+        <line x1="210" y1="160" x2="125" y2="265" class="radar-axis"></line>
+        <line x1="210" y1="160" x2="75" y2="118" class="radar-axis"></line>
 
-      <polygon points="180,54 258,113 226,203 136,198 104,116" class="radar-fill"></polygon>
+        <polygon points="210,60 302,136 264,222 150,214 118,135" class="radar-data ds"></polygon>
+        <polygon points="210,72 284,141 258,210 165,205 130,142" class="radar-data ml"></polygon>
+        <polygon points="210,86 299,132 252,198 176,206 126,129" class="radar-data auto"></polygon>
+        <polygon points="210,91 286,139 246,205 160,199 136,140" class="radar-data eng"></polygon>
 
-      <text x="180" y="20" class="radar-label">Engineering</text>
-      <text x="313" y="97" class="radar-label">Automation</text>
-      <text x="258" y="252" class="radar-label">Data Science</text>
-      <text x="40" y="97" class="radar-label">ML & BI</text>
-      <text x="84" y="252" class="radar-label">Delivery</text>
-    </svg>
+        <text x="210" y="28" class="radar-label">Data Science</text>
+        <text x="370" y="122" class="radar-label">Automation</text>
+        <text x="306" y="286" class="radar-label">ML & BI</text>
+        <text x="40" y="122" class="radar-label">Engineering</text>
+        <text x="132" y="286" class="radar-label">Delivery</text>
+      </svg>
+      <div class="radar-legend">
+        <span><i class="swatch ds"></i> Data Science</span>
+        <span><i class="swatch ml"></i> Machine Learning</span>
+        <span><i class="swatch auto"></i> Automation</span>
+        <span><i class="swatch eng"></i> Engineering</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="tech-stack">
   <h2>Tech Stack</h2>
-  <div class="stack-cloud">
-    <span class="stack-pill">Python</span>
-    <span class="stack-pill">R</span>
-    <span class="stack-pill">SQL</span>
-    <span class="stack-pill">n8n</span>
-    <span class="stack-pill">Scikit-learn</span>
-    <span class="stack-pill">Docker</span>
+  <div class="stack-board">
+    <article class="stack-col">
+      <h3>Data Science & BI</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">R</span>
+        <span class="stack-pill">Pandas</span>
+        <span class="stack-pill">NumPy</span>
+        <span class="stack-pill">Power BI</span>
+        <span class="stack-pill">Tableau</span>
+      </div>
+    </article>
+    <article class="stack-col">
+      <h3>Machine Learning</h3>
+      <div class="stack-list">
+        <span class="stack-pill">Scikit-learn</span>
+        <span class="stack-pill">Regression</span>
+        <span class="stack-pill">Classification</span>
+        <span class="stack-pill">Feature Engineering</span>
+        <span class="stack-pill">Model Evaluation</span>
+      </div>
+    </article>
+    <article class="stack-col">
+      <h3>Automation & CRM</h3>
+      <div class="stack-list">
+        <span class="stack-pill">n8n</span>
+        <span class="stack-pill">Zapier</span>
+        <span class="stack-pill">ManyChat</span>
+        <span class="stack-pill">HubSpot</span>
+        <span class="stack-pill">Pipedrive</span>
+        <span class="stack-pill">Twilio</span>
+      </div>
+    </article>
+    <article class="stack-col">
+      <h3>Engineering & Tools</h3>
+      <div class="stack-list">
+        <span class="stack-pill">SQL</span>
+        <span class="stack-pill">MySQL</span>
+        <span class="stack-pill">Docker</span>
+        <span class="stack-pill">Streamlit</span>
+        <span class="stack-pill">Git/GitHub</span>
+        <span class="stack-pill">Pytest</span>
+      </div>
+    </article>
   </div>
 </section>
 
