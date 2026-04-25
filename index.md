@@ -88,7 +88,7 @@ title: Home
 
 <section class="viz-section">
   <h2>Skills Distribution</h2>
-  <p class="meta">A quick visual summary of my all-rounder capability across Engineering, Data, and Automation.</p>
+  <p class="meta">A two-layer view of my profile: software-engineering foundation plus data-science growth.</p>
   <div class="viz-card">
     <div class="radar-wrap">
       <svg class="radar-chart" viewBox="0 0 420 320" role="img" aria-label="Skills distribution radar chart">
@@ -104,73 +104,54 @@ title: Home
         <line x1="210" y1="160" x2="125" y2="265" class="radar-axis"></line>
         <line x1="210" y1="160" x2="75" y2="118" class="radar-axis"></line>
 
-        <polygon points="210,60 302,136 264,222 150,214 118,135" class="radar-data ds"></polygon>
-        <polygon points="210,72 284,141 258,210 165,205 130,142" class="radar-data ml"></polygon>
-        <polygon points="210,86 299,132 252,198 176,206 126,129" class="radar-data auto"></polygon>
-        <polygon points="210,91 286,139 246,205 160,199 136,140" class="radar-data eng"></polygon>
+        <polygon points="210,54 311,129 257,218 159,223 122,133" class="radar-data foundation"></polygon>
+        <polygon points="210,72 325,124 278,244 136,251 99,126" class="radar-data growth"></polygon>
 
-        <text x="210" y="28" class="radar-label">Data Science</text>
-        <text x="370" y="122" class="radar-label">Automation</text>
-        <text x="306" y="286" class="radar-label">ML & BI</text>
-        <text x="40" y="122" class="radar-label">Engineering</text>
-        <text x="132" y="286" class="radar-label">Delivery</text>
+        <text x="210" y="28" class="radar-label">Core Engineering</text>
+        <text x="372" y="122" class="radar-label">Operational AI</text>
+        <text x="306" y="286" class="radar-label">Geospatial & BI</text>
+        <text x="48" y="122" class="radar-label">Statistical Inference</text>
+        <text x="132" y="286" class="radar-label">Predictive Modeling</text>
       </svg>
       <div class="radar-legend">
-        <span><i class="swatch ds"></i> Data Science</span>
-        <span><i class="swatch ml"></i> Machine Learning</span>
-        <span><i class="swatch auto"></i> Automation</span>
-        <span><i class="swatch eng"></i> Engineering</span>
+        <span><i class="swatch foundation"></i> Layer 1: Foundation (Software Engineer)</span>
+        <span><i class="swatch growth"></i> Layer 2: Growth (Data Scientist)</span>
+        <span class="scale-note">Scale: center = 0, outer edge = 10 (expert).</span>
+        <span class="scale-note">Foundation scores: Eng 9.0, OpAI 7.5, GeoBI 5.5, Pred 6.0, Stat 6.5</span>
+        <span class="scale-note">Growth scores: Eng 7.5, OpAI 8.5, GeoBI 8.0, Pred 8.7, Stat 8.2</span>
       </div>
     </div>
   </div>
+  <p class="meta viz-keywords"><strong>Focus Keywords:</strong> Geospatial Analysis, Agentic Workflows, End-to-End MLOps, Production-Ready Code.</p>
 </section>
 
 <section class="tech-stack">
   <h2>Tech Stack</h2>
-  <div class="stack-board">
-    <article class="stack-col">
-      <h3>Data Science & BI</h3>
-      <div class="stack-list">
-        <span class="stack-pill">Python</span>
-        <span class="stack-pill">R</span>
-        <span class="stack-pill">Pandas</span>
-        <span class="stack-pill">NumPy</span>
-        <span class="stack-pill">Power BI</span>
-        <span class="stack-pill">Tableau</span>
-      </div>
-    </article>
-    <article class="stack-col">
-      <h3>Machine Learning</h3>
-      <div class="stack-list">
-        <span class="stack-pill">Scikit-learn</span>
-        <span class="stack-pill">Regression</span>
-        <span class="stack-pill">Classification</span>
-        <span class="stack-pill">Feature Engineering</span>
-        <span class="stack-pill">Model Evaluation</span>
-      </div>
-    </article>
-    <article class="stack-col">
-      <h3>Automation & CRM</h3>
-      <div class="stack-list">
-        <span class="stack-pill">n8n</span>
-        <span class="stack-pill">Zapier</span>
-        <span class="stack-pill">ManyChat</span>
-        <span class="stack-pill">HubSpot</span>
-        <span class="stack-pill">Pipedrive</span>
-        <span class="stack-pill">Twilio</span>
-      </div>
-    </article>
-    <article class="stack-col">
-      <h3>Engineering & Tools</h3>
-      <div class="stack-list">
-        <span class="stack-pill">SQL</span>
-        <span class="stack-pill">MySQL</span>
-        <span class="stack-pill">Docker</span>
-        <span class="stack-pill">Streamlit</span>
-        <span class="stack-pill">Git/GitHub</span>
-        <span class="stack-pill">Pytest</span>
-      </div>
-    </article>
+  <div class="stack-table">
+    <div class="stack-row stack-head">
+      <p>Category</p>
+      <p>Skills & Tools</p>
+    </div>
+    <div class="stack-row">
+      <p class="stack-cat">Data Science & ML</p>
+      <p>Python, R, Scikit-learn, Regression (Linear/Multiple), Classification, K-means, Hierarchical Clustering, PCA, Neural Networks, PyTorch, TensorFlow.</p>
+    </div>
+    <div class="stack-row">
+      <p class="stack-cat">AI & Automation</p>
+      <p>n8n (Advanced AI Workflows), Zapier, ManyChat, OpenAI API, NLP (Transformers), <strong>Agentic Workflows</strong>, HubSpot, Pipedrive.</p>
+    </div>
+    <div class="stack-row">
+      <p class="stack-cat">Engineering & MLOps</p>
+      <p>Java (2 years), SQL (MySQL, OLAP), Docker, Git (GitHub/GitLab), CI/CD, TDD (Testing First), DRY/KISS Principles, PHP, HTML/CSS/JS, <strong>End-to-End MLOps</strong>, <strong>Production-Ready Code</strong>.</p>
+    </div>
+    <div class="stack-row">
+      <p class="stack-cat">Mathematics for AI</p>
+      <p>Linear Algebra (Eigenvectors/Matrices), Calculus, Probability (Normal, Binomial, Uniform), Random Variables, Mathematical Modeling.</p>
+    </div>
+    <div class="stack-row">
+      <p class="stack-cat">Visualization & BI</p>
+      <p>Power BI (Incoming), Tableau, Data Visualization, Streamlit, <strong>Geospatial Analysis</strong> (Berlin EV Charging Project).</p>
+    </div>
   </div>
 </section>
 
