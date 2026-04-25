@@ -64,49 +64,64 @@ title: Home
   <h2>Impact in Numbers</h2>
   <div class="stats-grid">
     <article class="stat-card">
-      <p class="stat-num">3+</p>
-      <p class="stat-label">Years Experience</p>
-    </article>
-    <article class="stat-card">
       <p class="stat-num">10M+</p>
-      <p class="stat-label">Data Records Analyzed in BI Project</p>
+      <p class="stat-label">Big Data Scale: AOL Records Analyzed & Modeled</p>
     </article>
     <article class="stat-card">
-      <p class="stat-num">80%</p>
-      <p class="stat-label">Routine Queries Automated</p>
-    </article>
-    <article class="stat-card">
-      <p class="stat-num">50%</p>
-      <p class="stat-label">Onboarding Time Reduced</p>
-    </article>
-    <article class="stat-card">
-      <p class="stat-num">25+</p>
-      <p class="stat-label">SOPs Standardized</p>
-    </article>
-    <article class="stat-card">
-      <p class="stat-num">1800+</p>
-      <p class="stat-label">EV Charging Stations Modeled</p>
-    </article>
-    <article class="stat-card">
-      <p class="stat-num">124</p>
-      <p class="stat-label">Unit Tests in ChargeHubBerlin</p>
+      <p class="stat-num">70%</p>
+      <p class="stat-label">Operational AI: Automation of Routine Workflows</p>
     </article>
     <article class="stat-card">
       <p class="stat-num">85%</p>
-      <p class="stat-label">Test Coverage in EV App</p>
+      <p class="stat-label">Engineering Quality: Test Coverage in Production Apps</p>
     </article>
     <article class="stat-card">
-      <p class="stat-num">30%</p>
-      <p class="stat-label">Team Efficiency Gain (Lead Scoring)</p>
+      <p class="stat-num">35+</p>
+      <p class="stat-label">End-to-End Freelance and Academic Projects Delivered</p>
     </article>
     <article class="stat-card">
-      <p class="stat-num">15h/week</p>
-      <p class="stat-label">Support Time Saved</p>
+      <p class="stat-num">7.5+</p>
+      <p class="stat-label">Proven Reliability: Years of Cross-Functional Project Delivery</p>
     </article>
-    <article class="stat-card">
-      <p class="stat-num">20+</p>
-      <p class="stat-label">Projects Delivered</p>
-    </article>
+  </div>
+</section>
+
+<section class="viz-section">
+  <h2>Skills Distribution</h2>
+  <p class="meta">A quick visual summary of my all-rounder capability across Engineering, Data, and Automation.</p>
+  <div class="viz-card">
+    <svg class="radar-chart" viewBox="0 0 360 280" role="img" aria-label="Skills distribution radar chart">
+      <polygon points="180,30 300,95 255,235 105,235 60,95" class="radar-ring"></polygon>
+      <polygon points="180,60 270,108 236,214 124,214 90,108" class="radar-ring"></polygon>
+      <polygon points="180,90 240,122 218,194 142,194 120,122" class="radar-ring"></polygon>
+      <polygon points="180,120 210,136 199,173 161,173 150,136" class="radar-ring"></polygon>
+
+      <line x1="180" y1="145" x2="180" y2="30" class="radar-axis"></line>
+      <line x1="180" y1="145" x2="300" y2="95" class="radar-axis"></line>
+      <line x1="180" y1="145" x2="255" y2="235" class="radar-axis"></line>
+      <line x1="180" y1="145" x2="105" y2="235" class="radar-axis"></line>
+      <line x1="180" y1="145" x2="60" y2="95" class="radar-axis"></line>
+
+      <polygon points="180,54 258,113 226,203 136,198 104,116" class="radar-fill"></polygon>
+
+      <text x="180" y="20" class="radar-label">Engineering</text>
+      <text x="313" y="97" class="radar-label">Automation</text>
+      <text x="258" y="252" class="radar-label">Data Science</text>
+      <text x="40" y="97" class="radar-label">ML & BI</text>
+      <text x="84" y="252" class="radar-label">Delivery</text>
+    </svg>
+  </div>
+</section>
+
+<section class="tech-stack">
+  <h2>Tech Stack</h2>
+  <div class="stack-cloud">
+    <span class="stack-pill">Python</span>
+    <span class="stack-pill">R</span>
+    <span class="stack-pill">SQL</span>
+    <span class="stack-pill">n8n</span>
+    <span class="stack-pill">Scikit-learn</span>
+    <span class="stack-pill">Docker</span>
   </div>
 </section>
 

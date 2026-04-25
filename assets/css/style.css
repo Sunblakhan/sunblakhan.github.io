@@ -434,6 +434,71 @@ label {
   font-size: 0.92rem;
 }
 
+.viz-section {
+  margin-top: 1.2rem;
+}
+
+.viz-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+  background: linear-gradient(160deg, rgba(23, 16, 35, 0.9), rgba(32, 22, 51, 0.72));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radar-chart {
+  width: min(100%, 540px);
+  height: auto;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: rgba(192, 132, 252, 0.25);
+  stroke-width: 1.1;
+}
+
+.radar-axis {
+  stroke: rgba(244, 114, 182, 0.25);
+  stroke-width: 1.1;
+}
+
+.radar-fill {
+  fill: rgba(244, 114, 182, 0.25);
+  stroke: rgba(244, 114, 182, 0.82);
+  stroke-width: 2;
+}
+
+.radar-label {
+  fill: #f5d7ff;
+  font-size: 12px;
+  text-anchor: middle;
+}
+
+.tech-stack {
+  margin-top: 1.2rem;
+}
+
+.stack-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.stack-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(192, 132, 252, 0.5);
+  background: rgba(41, 24, 62, 0.6);
+  color: #f5d9ff;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
