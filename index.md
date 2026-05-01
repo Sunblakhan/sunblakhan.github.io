@@ -108,6 +108,7 @@ title: Home
 <section class="tech-stack">
   <div class="tech-shell">
   <h2>Tech Stack</h2>
+  <p class="tech-stack-lead">High-signal tools at a glance; expand any category for the full list.</p>
   <div class="stack-board">
     <article class="stack-col">
       <h3>Data Science & ML</h3>
@@ -115,17 +116,22 @@ title: Home
         <span class="stack-pill">Python</span>
         <span class="stack-pill">R</span>
         <span class="stack-pill">Scikit-learn</span>
-        <span class="stack-pill">Regression</span>
-        <span class="stack-pill">Classification</span>
-        <span class="stack-pill">K-means</span>
-        <span class="stack-pill">Hierarchical Clustering</span>
-        <span class="stack-pill">PCA</span>
         <span class="stack-pill">Neural Networks</span>
         <span class="stack-pill">PyTorch</span>
         <span class="stack-pill">TensorFlow</span>
-        <span class="stack-pill">Supervised Learning</span>
-        <span class="stack-pill">Unsupervised Learning</span>
       </div>
+      <details class="stack-more">
+        <summary>+ More in this area</summary>
+        <div class="stack-list">
+          <span class="stack-pill">Regression</span>
+          <span class="stack-pill">Classification</span>
+          <span class="stack-pill">K-means</span>
+          <span class="stack-pill">Hierarchical Clustering</span>
+          <span class="stack-pill">PCA</span>
+          <span class="stack-pill">Supervised Learning</span>
+          <span class="stack-pill">Unsupervised Learning</span>
+        </div>
+      </details>
     </article>
 
     <article class="stack-col">
@@ -137,37 +143,47 @@ title: Home
         <span class="stack-pill">ChatGPT OpenAPI</span>
         <span class="stack-pill">NLP (Transformers)</span>
         <span class="stack-pill">Agentic Workflows</span>
-        <span class="stack-pill">HubSpot</span>
-        <span class="stack-pill">Pipedrive</span>
-        <span class="stack-pill">CRM Migration</span>
-        <span class="stack-pill">GSuite</span>
-        <span class="stack-pill">AI Chatbots (Lead Gen/FAQ)</span>
       </div>
+      <details class="stack-more">
+        <summary>+ More in this area</summary>
+        <div class="stack-list">
+          <span class="stack-pill">HubSpot</span>
+          <span class="stack-pill">Pipedrive</span>
+          <span class="stack-pill">CRM Migration</span>
+          <span class="stack-pill">GSuite</span>
+          <span class="stack-pill">AI Chatbots (Lead Gen/FAQ)</span>
+        </div>
+      </details>
     </article>
 
     <article class="stack-col">
       <h3>Engineering & MLOps</h3>
       <div class="stack-list">
-        <span class="stack-pill">Java (2 years)</span>
         <span class="stack-pill">SQL (MySQL, OLAP)</span>
-        <span class="stack-pill">RDBMS (MySQL)</span>
         <span class="stack-pill">Docker</span>
         <span class="stack-pill">Apache Spark</span>
         <span class="stack-pill">Git (GitHub/GitLab)</span>
-        <span class="stack-pill">GitBash</span>
         <span class="stack-pill">CI/CD</span>
-        <span class="stack-pill">TDD (Testing First)</span>
-        <span class="stack-pill">Unit Testing</span>
-        <span class="stack-pill">DRY/KISS Principles</span>
-        <span class="stack-pill">PHP</span>
-        <span class="stack-pill">HTML/CSS/JS</span>
-        <span class="stack-pill">Bootstrap</span>
-        <span class="stack-pill">Data Structures</span>
-        <span class="stack-pill">OOP</span>
-        <span class="stack-pill">Software Architecture</span>
         <span class="stack-pill">End-to-End MLOps</span>
         <span class="stack-pill">Production-Ready Code</span>
+        <span class="stack-pill">TDD (Testing First)</span>
       </div>
+      <details class="stack-more">
+        <summary>+ More in this area</summary>
+        <div class="stack-list">
+          <span class="stack-pill">Java (2 years)</span>
+          <span class="stack-pill">RDBMS (MySQL)</span>
+          <span class="stack-pill">GitBash</span>
+          <span class="stack-pill">Unit Testing</span>
+          <span class="stack-pill">DRY/KISS Principles</span>
+          <span class="stack-pill">PHP</span>
+          <span class="stack-pill">HTML/CSS/JS</span>
+          <span class="stack-pill">Bootstrap</span>
+          <span class="stack-pill">Data Structures</span>
+          <span class="stack-pill">OOP</span>
+          <span class="stack-pill">Software Architecture</span>
+        </div>
+      </details>
     </article>
 
     <article class="stack-col">
@@ -177,9 +193,14 @@ title: Home
         <span class="stack-pill">Eigenvectors/Matrices</span>
         <span class="stack-pill">Calculus</span>
         <span class="stack-pill">Probability (Normal/Binomial/Uniform)</span>
-        <span class="stack-pill">Random Variables</span>
-        <span class="stack-pill">Mathematical Modeling</span>
       </div>
+      <details class="stack-more">
+        <summary>+ More in this area</summary>
+        <div class="stack-list">
+          <span class="stack-pill">Random Variables</span>
+          <span class="stack-pill">Mathematical Modeling</span>
+        </div>
+      </details>
     </article>
 
     <article class="stack-col">
@@ -190,12 +211,17 @@ title: Home
         <span class="stack-pill">Data Visualization</span>
         <span class="stack-pill">Streamlit</span>
         <span class="stack-pill">Geospatial Analysis (Berlin EV Project)</span>
-        <span class="stack-pill">WordPress/Shopify Customization</span>
-        <span class="stack-pill">SEO</span>
-        <span class="stack-pill">Adobe Photoshop</span>
-        <span class="stack-pill">Adobe Illustrator</span>
-        <span class="stack-pill">CapCut</span>
       </div>
+      <details class="stack-more">
+        <summary>+ More in this area</summary>
+        <div class="stack-list">
+          <span class="stack-pill">WordPress/Shopify Customization</span>
+          <span class="stack-pill">SEO</span>
+          <span class="stack-pill">Adobe Photoshop</span>
+          <span class="stack-pill">Adobe Illustrator</span>
+          <span class="stack-pill">CapCut</span>
+        </div>
+      </details>
     </article>
   </div>
   </div>

@@ -535,6 +535,13 @@ label {
   margin: 0 0 0.95rem;
 }
 
+.tech-stack .tech-stack-lead {
+  margin: -0.35rem 0 0.85rem;
+  font-size: 0.85rem;
+  color: rgba(230, 210, 255, 0.72);
+  line-height: 1.45;
+}
+
 .tech-stack .stack-board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
@@ -576,6 +583,43 @@ label {
   white-space: normal;
   overflow-wrap: anywhere;
   text-align: center;
+}
+
+.tech-stack .stack-more {
+  margin-top: 0.48rem;
+  border: 0;
+  padding: 0;
+}
+
+.tech-stack .stack-more summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #e8a6ff;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.tech-stack .stack-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.tech-stack .stack-more summary:hover,
+.tech-stack .stack-more summary:focus-visible {
+  color: #ffd0ff;
+  outline: none;
+}
+
+.tech-stack .stack-more[open] summary {
+  margin-bottom: 0.35rem;
+  color: #f5c4ff;
+}
+
+.tech-stack .stack-more .stack-list {
+  padding-top: 0.1rem;
 }
 
 .skills-grid {
@@ -909,6 +953,125 @@ label {
 
   .profile-panel {
     grid-template-columns: 1fr;
+  }
+}
+
+/* --- Light motion (scroll reveals + hero entrance) --- */
+@keyframes fade-rise-hero {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-rise-photo {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes sidebar-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-glow {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sidebar {
+    animation: sidebar-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero::before {
+    animation: hero-glow 8s ease-in-out infinite;
+  }
+
+  .hero .tag,
+  .hero .hero-content h1,
+  .hero .hero-content p,
+  .hero .actions,
+  .hero .hero-photo {
+    opacity: 0;
+    animation: fade-rise-hero 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero .tag {
+    animation-delay: 0.08s;
+  }
+
+  .hero .hero-content h1 {
+    animation-delay: 0.14s;
+  }
+
+  .hero .hero-content p {
+    animation-delay: 0.22s;
+  }
+
+  .hero .actions {
+    animation-delay: 0.3s;
+  }
+
+  .hero .hero-photo {
+    animation-name: fade-rise-photo;
+    animation-delay: 0.2s;
+  }
+
+  .motion-reveal {
+    opacity: 0;
+    will-change: opacity;
+  }
+
+  .motion-reveal:not(.is-inview) {
+    transition: none;
+  }
+
+  .motion-reveal.is-inview {
+    opacity: 1;
+    will-change: auto;
+    transition: opacity 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--motion-delay, 0ms);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar,
+  .hero::before,
+  .hero .tag,
+  .hero .hero-content h1,
+  .hero .hero-content p,
+  .hero .actions,
+  .hero .hero-photo {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .motion-reveal {
+    opacity: 1 !important;
+    transition: none !important;
   }
 }
 
