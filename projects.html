@@ -1,0 +1,101 @@
+---
+title: Portfolio
+permalink: /projects/
+---
+
+<section class="portfolio-page">
+  <header class="portfolio-header">
+    <h1>
+      <span data-lang="en">Portfolio Showcase</span>
+      <span data-lang="de">Portfolio</span>
+    </h1>
+    <p class="portfolio-lede">
+      <span data-lang="en">Filter by type or open documentation and slides where available.</span>
+      <span data-lang="de">Nach Typ filtern — Dokumentation und Folien, sobald Links hinterlegt sind.</span>
+    </p>
+    {% include lang-switcher.html %}
+  </header>
+
+  <div class="portfolio-filters" role="toolbar" aria-label="Portfolio filters">
+    {% for f in site.data.portfolio.filters %}
+      <button
+        type="button"
+        class="filter-btn{% if f.id == 'all' %} is-active{% endif %}"
+        data-filter="{{ f.id }}"
+      >
+        <span data-lang="en">{{ f.label_en }}</span>
+        <span data-lang="de">{{ f.label_de }}</span>
+      </button>
+    {% endfor %}
+  </div>
+
+  <div class="portfolio-grid">
+    {% for project in site.data.portfolio.projects %}
+      <article class="project-card card" data-categories="{{ project.categories | join: ' ' }}">
+        <div class="project-card-media">
+          {% assign thumb = project.thumbnail | strip %}
+          {% if thumb != "" %}
+            <img src="{{ thumb | relative_url }}" alt="" class="project-card-thumb" loading="lazy" decoding="async" />
+          {% else %}
+            <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
+          {% endif %}
+        </div>
+
+        <div class="project-card-body">
+          <h3 class="project-card-title">
+            <span data-lang="en">{{ project.title_en }}</span>
+            <span data-lang="de">{{ project.title_de }}</span>
+          </h3>
+          <p>
+            <span data-lang="en">{{ project.summary_en }}</span>
+            <span data-lang="de">{{ project.summary_de }}</span>
+          </p>
+          {% if project.tech.size > 0 %}
+            <ul class="inline-list project-tech">
+              {% for t in project.tech %}
+                <li class="pill">{{ t }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% assign men = project.meta_en | strip %}
+          {% assign mde = project.meta_de | strip %}
+          {% if men != "" or mde != "" %}
+            <p class="meta project-meta">
+              <span data-lang="en">{{ project.meta_en }}</span>
+              <span data-lang="de">{{ project.meta_de }}</span>
+            </p>
+          {% endif %}
+
+          {% assign doc = project.documentation_url | strip %}
+          {% assign slides = project.presentation_url | strip %}
+          {% if doc != "" or slides != "" %}
+            <div class="project-extra-links">
+              {% if doc != "" %}
+                <a class="btn btn-ghost btn-sm project-doc-link" href="{{ doc }}" target="_blank" rel="noopener noreferrer">
+                  <span data-lang="en">Documentation</span>
+                  <span data-lang="de">Dokumentation</span>
+                </a>
+              {% endif %}
+              {% if slides != "" %}
+                <a class="btn btn-ghost btn-sm" href="{{ slides }}" target="_blank" rel="noopener noreferrer">
+                  <span data-lang="en">Slides</span>
+                  <span data-lang="de">Folien</span>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          <p class="project-main-links">
+            {% for link in project.links %}
+              {% unless forloop.first %}<span class="project-link-sep" aria-hidden="true"> · </span>{% endunless %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                <span data-lang="en">{{ link.label_en }}</span>
+                <span data-lang="de">{{ link.label_de }}</span>
+              </a>
+            {% endfor %}
+          </p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

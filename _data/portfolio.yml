@@ -1,0 +1,90 @@
+# Portfolio projects for /projects/ — used by Jekyll Liquid.
+# How to add thumbnails & docs: see PORTFOLIO-ASSETS.md in the repo root.
+#
+# categories: use these slugs for filters (space-separated on cards)
+#   freelance | coding | ai | data-science | personal
+#
+# Optional URLs: leave "" until you have a link (Google Drive, PDF, Slides, Notion, etc.)
+
+filters:
+  - id: all
+    label_en: All
+    label_de: Alle
+  - id: freelance
+    label_en: Freelance
+    label_de: Freelance
+  - id: coding
+    label_en: Coding
+    label_de: Softwareentwicklung
+  - id: ai
+    label_en: AI
+    label_de: KI
+  - id: data-science
+    label_en: Data Science
+    label_de: Data Science
+  - id: personal
+    label_en: Personal
+    label_de: Persönlich
+
+projects:
+  - slug: chargehub
+    categories: [data-science, coding, personal]
+    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=ChargeHub"
+    documentation_url: ""
+    presentation_url: ""
+    title_en: "ChargeHubBerlin EV Station Management"
+    title_de: "ChargeHubBerlin – Verwaltung von EV-Ladestationen"
+    summary_en: "A geospatial EV platform for monitoring and exploring 1,800+ charging stations across Berlin."
+    summary_de: "Eine Geodaten-Plattform zur Übersicht und Erkundung von über 1.800 Ladestationen in Berlin."
+    meta_en: "Highlights: 124 unit tests, 85% test coverage, quality checks via Qodana/PyCharm Inspect."
+    meta_de: "Highlights: 124 Unit-Tests, 85 % Testabdeckung, Qualitätschecks mit Qodana/PyCharm Inspect."
+    tech: [Python, Streamlit, SQLite, TDD/DDD]
+    links:
+      - { label_en: "Live App", label_de: "Live-App", url: "https://charging-app-station.streamlit.app/" }
+      - { label_en: "GitHub", label_de: "GitHub", url: "https://github.com/Sunblakhan/Charging-Hub-Station" }
+
+  - slug: bi-aol
+    categories: [data-science, coding, personal]
+    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=AOL+BI"
+    documentation_url: ""
+    presentation_url: ""
+    title_en: "E-Commerce Digital Goods Analysis"
+    title_de: "E-Commerce-Analyse digitaler Güter"
+    summary_en: "Big-data analytics using Exasol and advanced SQL on 10M+ AOL search records."
+    summary_de: "Big-Data-Analytik mit Exasol und SQL auf über 10 Mio. AOL-Suchdatensätzen."
+    meta_en: "Highlights: Star schema modeling, trend analysis, predictive insights linked to market behavior."
+    meta_de: "Highlights: Sternschema-Modellierung, Trendanalyse, predictive Insights zum Marktverhalten."
+    tech: [Exasol, Python, SQL, Time Series]
+    links:
+      - { label_en: "Project repository", label_de: "Projekt-Repository", url: "https://github.com/Sunblakhan/BI-AOL-Project" }
+
+  - slug: ai-ops
+    categories: [ai, freelance]
+    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=AI+Ops"
+    documentation_url: ""
+    presentation_url: ""
+    title_en: "AI-Powered Operations Automation"
+    title_de: "KI-gestützte Operations-Automatisierung"
+    summary_en: "Cross-platform workflow systems for lead scoring, customer support automation, and scheduling pipelines."
+    summary_de: "Workflow-Systeme für Lead-Scoring, Support-Automatisierung und Termin-Pipelines auf mehreren Plattformen."
+    meta_en: "Highlights: ~80% routine query automation, 30% efficiency gain, major reduction in response latency."
+    meta_de: "Highlights: ~80 % Automatisierung routinemäßiger Anfragen, 30 % Effizienzgewinn, kürzere Antwortzeiten."
+    tech: [n8n, ManyChat, HubSpot, Zapier, Pipedrive]
+    links:
+      - { label_en: "Freelance profile", label_de: "Freelance-Profil", url: "https://www.upwork.com/freelancers/~0194eb36fd4f252888" }
+
+  - slug: dev-links
+    categories: [coding, personal]
+    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=Dev+Links"
+    documentation_url: ""
+    presentation_url: ""
+    title_en: "Technical Portfolio Links"
+    title_de: "Technische Portfolio-Links"
+    summary_en: "Explore my repositories, snippets, and profile across developer platforms."
+    summary_de: "Repositories, Snippets und Profile auf Entwicklerplattformen."
+    meta_en: ""
+    meta_de: ""
+    tech: []
+    links:
+      - { label_en: "GitHub", label_de: "GitHub", url: "https://github.com/Sunblakhan" }
+      - { label_en: "GitLab snippets", label_de: "GitLab-Snippets", url: "https://gitlab.bht-berlin.de/users/fbtg6516/snippets" }

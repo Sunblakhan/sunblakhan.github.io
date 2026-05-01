@@ -6,6 +6,21 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}" />
     {% seo %}
+    <script>
+      (function () {
+        var k = "sunbla-site-lang";
+        var l = "en";
+        try {
+          if (localStorage.getItem(k) === "de") l = "de";
+          var q = window.location.search || "";
+          if (q.indexOf("lang=de") !== -1) l = "de";
+          if (q.indexOf("lang=en") !== -1) l = "en";
+        } catch (e) {}
+        document.documentElement.lang = l === "de" ? "de" : "en";
+        document.documentElement.classList.remove("site-lang-en", "site-lang-de");
+        document.documentElement.classList.add(l === "de" ? "site-lang-de" : "site-lang-en");
+      })();
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.time | relative_url }}" />
   </head>
   <body>
@@ -24,6 +39,8 @@
         <p>Built with Jekyll and GitHub Pages</p>
       </div>
     </footer>
+    <script defer src="{{ '/assets/js/lang-toggle.js?v=' | append: site.time | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/portfolio-filter.js?v=' | append: site.time | relative_url }}"></script>
     <script defer src="{{ '/assets/js/site-animations.js?v=' | append: site.time | relative_url }}"></script>
   </body>
 </html>
