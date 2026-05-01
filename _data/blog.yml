@@ -1,0 +1,33 @@
+# Blog-only taxonomy (toolbar + category pills on /blog/).
+# In each post’s front matter use the `id` values under `categories:` (YAML list).
+#
+# Optional chips (not filtered by toolbar): keywords: [...]  or  tags: [...]
+
+filters:
+  - id: all
+    label_en: All
+    label_de: Alle
+  - id: ai
+    label_en: AI
+    label_de: KI
+  - id: data-science
+    label_en: Data Science
+    label_de: Data Science
+  - id: mystory
+    label_en: My story
+    label_de: Meine Geschichte
+  - id: motivational
+    label_en: Motivational
+    label_de: Motivation
+  - id: growth
+    label_en: Growth
+    label_de: Wachstum
+  - id: career
+    label_en: Career
+    label_de: Karriere
+  - id: life-in-germany
+    label_en: Life in Germany
+    label_de: Leben in Deutschland
+  - id: freelancing
+    label_en: Freelancing
+    label_de: Freelancing

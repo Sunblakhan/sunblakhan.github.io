@@ -18,7 +18,25 @@ layout: default
 
   <header class="blog-post-header">
     <h1 class="blog-post-title">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%B %d, %Y" }}</p>
+    <p class="blog-post-dateline meta">{{ page.date | date: "%B %d, %Y" }}</p>
+    {% if page.categories.size > 0 %}
+    <ul class="inline-list project-tech blog-post-category-list" aria-label="Categories">
+      {% for cat in page.categories %}
+      <li class="pill">{% include category-pill-label.html slug=cat %}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% assign pk = page.keywords %}
+    {% if pk == blank %}
+      {% assign pk = page.tags %}
+    {% endif %}
+    {% if pk and pk.size > 0 %}
+    <ul class="inline-list project-tech blog-post-keyword-list" aria-label="Keywords">
+      {% for k in pk %}
+      <li class="pill">{{ k }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
   </header>
 
   <div class="blog-post-body post-prose">

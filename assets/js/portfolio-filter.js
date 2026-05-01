@@ -1,7 +1,7 @@
 (function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    var bar = document.querySelector(".portfolio-filters");
-    var grid = document.querySelector(".portfolio-grid");
+  function bindPage(page) {
+    var bar = page.querySelector(".portfolio-filters");
+    var grid = page.querySelector(".portfolio-grid");
     if (!bar || !grid) return;
 
     bar.addEventListener("click", function (e) {
@@ -23,5 +23,9 @@
         card.hidden = cats.indexOf(id) === -1;
       });
     });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".portfolio-page").forEach(bindPage);
   });
 })();

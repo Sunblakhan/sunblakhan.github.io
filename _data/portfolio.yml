@@ -1,8 +1,9 @@
 # Portfolio projects for /projects/ — used by Jekyll Liquid.
 # How to add thumbnails & docs: see PORTFOLIO-ASSETS.md in the repo root.
 #
-# categories: use these slugs for filters (space-separated on cards)
+# categories: slugs for portfolio cards only (space-separated on cards).
 #   freelance | coding | ai | data-science | personal
+# Blog taxonomy is separate: see _data/blog.yml
 #
 # Optional URLs: leave "" until you have a link (Google Drive, PDF, Slides, Notion, etc.)
 

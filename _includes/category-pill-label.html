@@ -1,0 +1,13 @@
+{% assign slug = include.slug %}
+{% assign matched_label = '' %}
+{% for f in site.data.blog.filters %}
+  {% if f.id == slug %}
+    {% capture matched_label %}<span data-lang="en">{{ f.label_en }}</span><span data-lang="de">{{ f.label_de }}</span>{% endcapture %}
+  {% endif %}
+{% endfor %}
+{% assign matched_label = matched_label | strip %}
+{% if matched_label != '' %}
+{{ matched_label }}
+{% else %}
+<span>{{ slug | replace: '-', ' ' }}</span>
+{% endif %}

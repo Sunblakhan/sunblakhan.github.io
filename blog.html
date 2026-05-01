@@ -3,22 +3,40 @@ title: Blog
 permalink: /blog/
 ---
 
-<section class="blog-page">
-  <header class="blog-header">
+<section class="blog-page portfolio-page">
+  <header class="portfolio-header">
     <h1>
       <span data-lang="en">Blog</span>
       <span data-lang="de">Blog</span>
     </h1>
-    <p class="blog-lede meta">
-      <span data-lang="en">Notes, experiments, and insights from my learning and project work.</span>
-      <span data-lang="de">Notizen, Experimente und Erfahrungen aus Lernen und Projektarbeit.</span>
+    <p class="portfolio-lede">
+      <span data-lang="en">Filter by topic, or open a post to read the full story.</span>
+      <span data-lang="de">Nach Thema filtern — oder einen Beitrag öffnen und vollständig lesen.</span>
     </p>
   </header>
 
   {% if site.posts.size > 0 %}
+  <div class="portfolio-filters" role="toolbar" aria-label="Blog category filters">
+    {% for f in site.data.blog.filters %}
+    <button
+      type="button"
+      class="filter-btn{% if f.id == 'all' %} is-active{% endif %}"
+      data-filter="{{ f.id }}"
+    >
+      <span data-lang="en">{{ f.label_en }}</span>
+      <span data-lang="de">{{ f.label_de }}</span>
+    </button>
+    {% endfor %}
+  </div>
+
   <div class="portfolio-grid blog-grid">
     {% for post in site.posts %}
-    <article class="project-card card blog-entry-card">
+    {% assign cat_raw = post.categories | join: " " | strip %}
+    {% assign keys = post.keywords %}
+    {% if keys == blank %}
+      {% assign keys = post.tags %}
+    {% endif %}
+    <article class="project-card card" data-categories="{{ cat_raw | strip }}">
       <div class="project-card-media">
         {% if post.image %}
         <a href="{{ post.url | relative_url }}" class="blog-thumb-link" aria-label="{{ post.title | escape }}">
@@ -38,12 +56,26 @@ permalink: /blog/
       </div>
 
       <div class="project-card-body">
-        <h2 class="project-card-title">
+        <h3 class="project-card-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h2>
-        <p class="meta blog-entry-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        <p class="project-main-links">
+        </h3>
+        <p class="meta blog-entry-dateline">{{ post.date | date: "%B %d, %Y" }}</p>
+        {% if post.categories.size > 0 %}
+        <ul class="inline-list project-tech blog-category-list-cards" aria-label="Categories">
+          {% for cat in post.categories %}
+          <li class="pill">{% include category-pill-label.html slug=cat %}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</p>
+        {% if keys != blank and keys.size > 0 %}
+        <ul class="inline-list project-tech blog-keyword-list" aria-label="Keywords">
+          {% for k in keys %}
+          <li class="pill">{{ k }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p class="project-main-links blog-read-link-wrap">
           <a href="{{ post.url | relative_url }}">
             <span data-lang="en">Read post</span>
             <span data-lang="de">Weiterlesen</span>
@@ -54,7 +86,7 @@ permalink: /blog/
     {% endfor %}
   </div>
   {% else %}
-  <p>
+  <p class="portfolio-lede">
     <span data-lang="en">No posts yet. New articles will appear here.</span>
     <span data-lang="de">Noch keine Beiträge. Neue Artikel erscheinen hier.</span>
   </p>

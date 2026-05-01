@@ -1185,15 +1185,11 @@ html.site-lang-de [data-lang="en"] {
 }
 
 /* Blog index + post layout */
-.blog-page .blog-header h1 {
-  margin-bottom: 0.35rem;
+.blog-entry-dateline {
+  margin-top: 0.15rem;
 }
 
-.blog-lede {
-  margin-top: 0;
-}
-
-.blog-entry-date {
+.blog-category-list-cards.project-tech {
   margin: 0.15rem 0 0;
 }
 
@@ -1236,6 +1232,14 @@ html.site-lang-de [data-lang="en"] {
 
 .blog-post-header {
   padding: 1.05rem 1.15rem 0;
+}
+
+.blog-post-header .inline-list.project-tech.blog-post-category-list {
+  margin-top: 0.65rem;
+}
+
+.blog-post-header .blog-post-keyword-list.project-tech {
+  margin-top: 0.48rem;
 }
 
 .blog-post-title {
