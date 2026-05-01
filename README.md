@@ -33,7 +33,7 @@ This website gives recruiters and collaborators a clearer, more complete picture
 - **Home:** high-level profile, impact metrics, experience, education, skills stack, testimonials, and direct contact CTA
 - **About:** my story, growth journey, and personal values beyond job titles
 - **Portfolio:** selected projects with filters, thumbnails, and optional documentation / slides (see **`PORTFOLIO-ASSETS.md`**)
-- **Language:** Homepage and Portfolio support **English / Deutsch** (`EN` / `DE`), stored in your browser (`localStorage`); append `?lang=de` or `?lang=en` to force on first load.
+- **Language:** The sidebar **EN / DE** toggle applies site-wide (home, portfolio, About, Personality, Blog, Freelancing, Contact, and navigation labels). Choice is remembered in **`localStorage`**; use **`?lang=de`** or **`?lang=en`** on any URL for the first visit.
 - **Personality:** work style, mindset, and human side of collaboration
 - **Blog:** thoughts, learning notes, and project reflections
 - **Contact:** direct ways to reach me (email, WhatsApp, LinkedIn, Upwork, Topmate)

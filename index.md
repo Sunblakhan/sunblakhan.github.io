@@ -3,9 +3,6 @@ title: Home
 ---
 
 <section class="hero">
-  <div class="hero-topbar">
-    {% include lang-switcher.html %}
-  </div>
   <div class="hero-grid">
     <div class="hero-content">
       <span class="tag"><span data-lang="en">Available for freelance, consultation and collaboration</span><span data-lang="de">Verfügbar für Freelancing, Beratung und Zusammenarbeit</span></span>

@@ -17,13 +17,18 @@ defaults:
       layout: default
 
 nav_pages:
-  - title: About
+  - title_en: About
+    title_de: Über mich
     url: /aboutme/
-  - title: Portfolio
+  - title_en: Portfolio
+    title_de: Portfolio
     url: /projects/
-  - title: Personality
+  - title_en: Personality
+    title_de: Persönlichkeit
     url: /personality/
-  - title: Blog
+  - title_en: Blog
+    title_de: Blog
     url: /blog/
-  - title: Contact
+  - title_en: Contact
+    title_de: Kontakt
     url: /contactme/

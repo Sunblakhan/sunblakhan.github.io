@@ -68,6 +68,15 @@ body {
   font-size: 0.86rem;
 }
 
+.sidebar-lang {
+  margin-top: 0.85rem;
+}
+
+.sidebar-lang .lang-switcher {
+  width: 100%;
+  justify-content: space-between;
+}
+
 .sidebar-block {
   margin-top: 1.15rem;
   padding-top: 1rem;
@@ -1053,10 +1062,8 @@ html.site-lang-de [data-lang="en"] {
   box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.18) inset;
 }
 
-.hero-topbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
+.contact-card-actions {
+  margin-top: 0.5rem;
 }
 
 /* --- Portfolio filters + cards --- */
@@ -1064,35 +1071,6 @@ html.site-lang-de [data-lang="en"] {
   display: grid;
   gap: 0.65rem;
   margin-bottom: 1.25rem;
-}
-
-.portfolio-header .lang-switcher {
-  justify-self: start;
-}
-
-@media (min-width: 720px) {
-  .portfolio-header {
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    align-items: start;
-  }
-
-  .portfolio-header h1 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .portfolio-header .portfolio-lede {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    margin-top: -0.2rem;
-  }
-
-  .portfolio-header .lang-switcher {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-  }
 }
 
 .portfolio-page h1 {

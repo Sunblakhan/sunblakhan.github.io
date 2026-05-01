@@ -1,22 +1,29 @@
 <aside class="sidebar">
   <div class="sidebar-top">
     <a class="brand" href="{{ '/' | relative_url }}">Sunbla Khan</a>
-    <p class="brand-sub">Data Analyst & Automation Specialist</p>
+    <p class="brand-sub"><span data-lang="en">Data Analyst & Automation Specialist</span><span data-lang="de">Data Analystin & Automation Specialist</span></p>
+    <div class="sidebar-lang">
+      {% include lang-switcher.html %}
+    </div>
   </div>
 
   <div class="sidebar-block">
-    <p class="sidebar-title">Sections</p>
+    <p class="sidebar-title"><span data-lang="en">Sections</span><span data-lang="de">Bereiche</span></p>
     <nav aria-label="Main navigation">
       <ul class="nav-links">
         {% for item in site.nav_pages %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          <li>
+            <a href="{{ item.url | relative_url }}">
+              <span data-lang="en">{{ item.title_en }}</span><span data-lang="de">{{ item.title_de }}</span>
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </nav>
   </div>
 
   <div class="sidebar-block">
-    <p class="sidebar-title">Quick Links</p>
+    <p class="sidebar-title"><span data-lang="en">Quick Links</span><span data-lang="de">Schnellzugriff</span></p>
     <ul class="nav-links">
       <li><a href="https://www.upwork.com/freelancers/~0194eb36fd4f252888" target="_blank" rel="noopener noreferrer">Upwork</a></li>
       <li><a href="https://topmate.io/sunbla_khan" target="_blank" rel="noopener noreferrer">Topmate</a></li>
