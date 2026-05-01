@@ -2,6 +2,7 @@
 title: "I Started at 16 Because I Had No Choice — And That Changed Everything"
 date: 2026-05-01
 excerpt: I didn't start early because I was confident. I started because I had no other option.
+image: /assets/img/blog/started-at-16-cover.svg
 ---
 
 I didn’t start early because I was confident.

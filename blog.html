@@ -1,0 +1,62 @@
+---
+title: Blog
+permalink: /blog/
+---
+
+<section class="blog-page">
+  <header class="blog-header">
+    <h1>
+      <span data-lang="en">Blog</span>
+      <span data-lang="de">Blog</span>
+    </h1>
+    <p class="blog-lede meta">
+      <span data-lang="en">Notes, experiments, and insights from my learning and project work.</span>
+      <span data-lang="de">Notizen, Experimente und Erfahrungen aus Lernen und Projektarbeit.</span>
+    </p>
+  </header>
+
+  {% if site.posts.size > 0 %}
+  <div class="portfolio-grid blog-grid">
+    {% for post in site.posts %}
+    <article class="project-card card blog-entry-card">
+      <div class="project-card-media">
+        {% if post.image %}
+        <a href="{{ post.url | relative_url }}" class="blog-thumb-link" aria-label="{{ post.title | escape }}">
+          <img
+            src="{{ post.image | relative_url }}"
+            alt=""
+            class="project-card-thumb"
+            width="640"
+            height="360"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        {% else %}
+        <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
+        {% endif %}
+      </div>
+
+      <div class="project-card-body">
+        <h2 class="project-card-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <p class="meta blog-entry-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p class="blog-entry-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        <p class="project-main-links">
+          <a href="{{ post.url | relative_url }}">
+            <span data-lang="en">Read post</span>
+            <span data-lang="de">Weiterlesen</span>
+          </a>
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>
+    <span data-lang="en">No posts yet. New articles will appear here.</span>
+    <span data-lang="de">Noch keine Beiträge. Neue Artikel erscheinen hier.</span>
+  </p>
+  {% endif %}
+</section>

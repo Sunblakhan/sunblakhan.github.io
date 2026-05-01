@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="ttl">
+  <title id="ttl">Abstract horizon  dawn path over hills</title>
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#120a22"/>
+      <stop offset="45%" stop-color="#24143c"/>
+      <stop offset="100%" stop-color="#3d1f54"/>
+    </linearGradient>
+    <linearGradient id="pathglow" x1="40%" y1="100%" x2="55%" y2="35%">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#2dd4bf" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.42"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="78%" cy="22%" r="18%">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#sky)"/>
+  <rect width="1200" height="675" fill="url(#sun)"/>
+  <path d="M0 538 C220 482 520 505 740 472 C920 446 1060 390 1200 358 V675 H0 Z" fill="#0f0818" opacity="0.85"/>
+  <path d="M0 578 C260 498 560 538 760 492 C930 463 1090 420 1200 398 V675 H0 Z" fill="url(#pathglow)"/>
+  <path d="M0 602 C340 548 620 582 760 548 C930 508 1140 470 1200 452 V675 H0 Z" fill="#090510" opacity="0.92"/>
+</svg>

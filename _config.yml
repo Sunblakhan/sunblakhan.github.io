@@ -15,6 +15,10 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
 
 nav_pages:
   - title_en: About

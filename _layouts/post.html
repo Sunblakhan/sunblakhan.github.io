@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="blog-post blog-post-page card">
+  {% if page.image %}
+  <figure class="blog-post-hero">
+    <img
+      src="{{ page.image | relative_url }}"
+      alt="{{ page.title | escape }}"
+      width="1200"
+      height="675"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
+  {% endif %}
+
+  <header class="blog-post-header">
+    <h1 class="blog-post-title">{{ page.title }}</h1>
+    <p class="meta">{{ page.date | date: "%B %d, %Y" }}</p>
+  </header>
+
+  <div class="blog-post-body post-prose">
+    {{ content }}
+  </div>
+</article>
