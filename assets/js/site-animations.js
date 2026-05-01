@@ -34,6 +34,10 @@
     queue(section, i++);
   });
 
+  root.querySelectorAll(".personality-dashboard section").forEach(function (section) {
+    queue(section, i++);
+  });
+
   root.querySelectorAll("article.card").forEach(function (card) {
     if (card.closest(".content-inner > section")) return;
     queue(card, i++);
