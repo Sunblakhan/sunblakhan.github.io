@@ -1419,6 +1419,8 @@ html.site-lang-de [data-lang="en"] {
   font-weight: 800;
   color: #fff;
   justify-self: end;
+  text-align: right;
+  line-height: 1.25;
 }
 
 .type-weak {
