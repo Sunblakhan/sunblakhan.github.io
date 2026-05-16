@@ -30,7 +30,7 @@ filters:
 projects:
   - slug: chargehub
     categories: [data-science, coding, personal]
-    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=ChargeHub"
+    thumbnail: "/assets/img/projects/charging-hub-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
     title_en: "ChargeHubBerlin EV Station Management"
@@ -46,7 +46,7 @@ projects:
 
   - slug: bi-aol
     categories: [data-science, coding, personal]
-    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=AOL+BI"
+    thumbnail: "/assets/img/projects/Ecommerce-AOL-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
     title_en: "E-Commerce Digital Goods Analysis"
