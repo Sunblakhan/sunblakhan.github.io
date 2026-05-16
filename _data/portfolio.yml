@@ -61,7 +61,7 @@ projects:
 
   - slug: ai-ops
     categories: [ai, freelance]
-    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=AI+Ops"
+    thumbnail: "/assets/img/projects/AI-Automation-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
     title_en: "AI-Powered Operations Automation"
@@ -76,7 +76,7 @@ projects:
 
   - slug: dev-links
     categories: [coding, personal]
-    thumbnail: "https://placehold.co/720x405/12081a/d8b4fe?text=Dev+Links"
+    thumbnail: "/assets/img/projects/Developers-link-hub.png"
     documentation_url: ""
     presentation_url: ""
     title_en: "Technical Portfolio Links"
