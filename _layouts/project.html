@@ -16,12 +16,13 @@ layout: default
 </article>
 {% else %}
 <article class="project-detail card">
-  <p class="project-back">
-    <a href="{{ '/projects/' | relative_url }}">
-      <span data-lang="en">← Back to portfolio</span>
-      <span data-lang="de">← Zurück zum Portfolio</span>
+  <nav class="project-back" aria-label="Breadcrumb">
+    <a href="{{ '/projects/' | relative_url }}" class="btn btn-ghost btn-sm project-back-btn">
+      <span class="project-back-arrow" aria-hidden="true">&#8592;</span>
+      <span data-lang="en">Back to portfolio</span>
+      <span data-lang="de">Zurück zum Portfolio</span>
     </a>
-  </p>
+  </nav>
 
   {% assign thumb = project.thumbnail | strip %}
   {% if thumb != "" %}
@@ -53,7 +54,7 @@ layout: default
 
     <div class="project-detail-actions">
       {% for link in project.links %}
-        <a class="btn btn-sm" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn-ghost btn-sm" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
           <span data-lang="en">{{ link.label_en }}</span>
           <span data-lang="de">{{ link.label_de }}</span>
         </a>

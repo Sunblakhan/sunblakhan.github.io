@@ -104,10 +104,65 @@ projects:
     categories: [data-science, coding, personal]
     thumbnail: "/assets/img/projects/Ecommerce-AOL-thumbnail.png"
     documentation_url: ""
-    presentation_url: ""
-    description_en: ""
-    description_de: ""
-    gallery: []
+    presentation_url: "/assets/docs/projects/BI Presentation- Ecommerce.pptx"
+    description_en: |
+      **E-Commerce Digital Goods Analysis** is a business-intelligence project built on **10M+ AOL search records**, using **Exasol** and advanced **SQL** to model e-commerce intent, category behavior, and time-series patterns.
+
+      ### What it covers
+
+      - **Star-schema data modeling** and an entity-relationship design for large-scale search analytics.
+      - **Search volume & user trends** — peaks by day and hour, unique users, and alignment with external events.
+      - **Category intent** and **competitive landscape** insights from query behavior.
+      - **Market linkage** — AOL user-interest signals compared to **AAPL** and **eBay** stock trends.
+
+      ### Stack & highlights
+
+      **Exasol**, **Python**, **SQL**, and **time-series analysis** with a focus on actionable BI visuals and narrative conclusions for digital-goods strategy.
+
+      Browse the **gallery** for charts and the ERD, or open the **presentation (PPTX)** for the full slide deck.
+    description_de: |
+      **E-Commerce-Analyse digitaler Güter** — ein BI-Projekt auf Basis von **über 10 Mio. AOL-Suchdatensätzen** mit **Exasol** und **SQL** zu E-Commerce-Intent, Kategorieverhalten und Zeitreihenmustern.
+
+      ### Inhalte
+
+      - **Sternschema** und **ER-Modell** für großskalige Suchanalytik.
+      - **Suchvolumen & Nutzertrends** — Peaks nach Tag/Stunde, Unique Users, Bezug zu externen Ereignissen.
+      - **Kategorie-Intent** und **Wettbewerbslandschaft** aus Suchverhalten.
+      - **Marktbezug** — AOL-Interesse vs. **AAPL**- und **eBay**-Aktientrends.
+
+      ### Technik
+
+      **Exasol**, **Python**, **SQL**, **Time-Series** — mit klaren Visualisierungen und strategischen Empfehlungen für digitale Güter.
+
+      **Galerie** für Charts und ERD; **Präsentation (PPTX)** für das vollständige Slide Deck.
+    gallery:
+      - src: "/assets/img/projects/ecommerceaol/ERD-diagram.png"
+        caption_en: "Entity-relationship diagram — star schema for search analytics"
+        caption_de: "ER-Diagramm — Sternschema für Suchanalytik"
+      - src: "/assets/img/projects/ecommerceaol/search-volume-analysis.png"
+        caption_en: "Search volume analysis"
+        caption_de: "Analyse des Suchvolumens"
+      - src: "/assets/img/projects/ecommerceaol/search-volume-unique-users-vs-external-events.png"
+        caption_en: "Search volume, unique users vs. external events"
+        caption_de: "Suchvolumen, Unique Users vs. externe Ereignisse"
+      - src: "/assets/img/projects/ecommerceaol/category-intent.png"
+        caption_en: "Category intent from search behavior"
+        caption_de: "Kategorie-Intent aus Suchverhalten"
+      - src: "/assets/img/projects/ecommerceaol/competitive-landscape-insights.png"
+        caption_en: "Competitive landscape insights"
+        caption_de: "Insights zur Wettbewerbslandschaft"
+      - src: "/assets/img/projects/ecommerceaol/peak-behavior-by-day.png"
+        caption_en: "Peak search behavior by day of week"
+        caption_de: "Peak-Suchverhalten nach Wochentag"
+      - src: "/assets/img/projects/ecommerceaol/peak-behavior-by-hour.png"
+        caption_en: "Peak search behavior by hour"
+        caption_de: "Peak-Suchverhalten nach Stunde"
+      - src: "/assets/img/projects/ecommerceaol/aol-user-interest-vs-aapl-stock-trend.png"
+        caption_en: "AOL user interest vs. AAPL stock trend"
+        caption_de: "AOL-Nutzerinteresse vs. AAPL-Aktientrend"
+      - src: "/assets/img/projects/ecommerceaol/aol-user-interest-vs-ebay-stock-trend.png"
+        caption_en: "AOL user interest vs. eBay stock trend"
+        caption_de: "AOL-Nutzerinteresse vs. eBay-Aktientrend"
     title_en: "E-Commerce Digital Goods Analysis"
     title_de: "E-Commerce-Analyse digitaler Güter"
     summary_en: "Big-data analytics using Exasol and advanced SQL on 10M+ AOL search records."
