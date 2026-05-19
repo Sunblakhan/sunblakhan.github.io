@@ -1,59 +1,96 @@
-# Portfolio: thumbnails, documentation & slides
+# Portfolio: thumbnails, detail pages, gallery & docs
 
-Project cards on the **Portfolio** page (`/projects/`) are driven by **`_data/portfolio.yml`**. Jekyll reads that file at build time; after you edit it, commit and push so GitHub Pages rebuilds the site.
+Project cards on **Portfolio** (`/projects/`) come from **`_data/portfolio.yml`**. Each project also has a **detail page** at **`/projects/<slug>/`** (for example `/projects/chargehub/`).
 
-## Thumbnails
+After you edit YAML or add images, commit and push so GitHub Pages rebuilds the site.
 
-1. Add image files under **`assets/img/projects/`** (create the folder if needed). Use PNG or WebP, roughly **1200×675** (16∶9) or similar so they look sharp on retina screens.
-2. In `_data/portfolio.yml`, set `thumbnail` to a **site-relative path** beginning with `/`, for example:
+## How it works
+
+| What visitors see | Where it is configured |
+|-------------------|------------------------|
+| Card on `/projects/` (thumbnail, short summary) | `_data/portfolio.yml` — `summary_*`, `thumbnail`, `categories` |
+| Full project page | Same YAML — `description_*`, `gallery`, `links`, `documentation_url`, `presentation_url` |
+| Page URL | `slug` field → `/projects/<slug>/` (wired by a small file in `project/<slug>.html`) |
+
+Cards link to the detail page (**View project**). The detail page shows the long description, image gallery, live demo / GitHub buttons, and documentation / slides when URLs are set.
+
+## Thumbnails (portfolio cards)
+
+1. Put images in **`assets/img/projects/`** (PNG or WebP, about **1200×675**, 16∶9).
+2. In `_data/portfolio.yml`:
    ```yaml
-   thumbnail: "/assets/img/projects/chargehub.png"
+   thumbnail: "/assets/img/projects/charging-hub-thumbnail.png"
    ```
-3. Alternatively, you may use a **full HTTPS URL** (e.g. a hosted screenshot or CDN). Until you have art, placeholders from `placehold.co` work for testing.
+3. You can use a full **HTTPS URL** instead. If `thumbnail` is `""`, a gradient placeholder is shown.
 
-If `thumbnail` is empty (`""`), the layout shows a **gradient placeholder** block instead of an image.
+## Gallery (detail page only)
 
-## Documentation
+1. Create a folder per project, for example:
+   - `assets/img/projects/chargehub/`
+   - `assets/img/projects/bi-aol/`
+2. Add screenshots there (`screenshot-map.png`, `architecture.png`, etc.).
+3. List them under that project in `_data/portfolio.yml`:
+   ```yaml
+   gallery:
+     - src: "/assets/img/projects/chargehub/screenshot-map.png"
+       caption_en: "Berlin station map"
+       caption_de: "Karte der Berliner Stationen"
+     - src: "/assets/img/projects/chargehub/dashboard.png"
+       caption_en: "Analytics dashboard"
+       caption_de: "Analytics-Dashboard"
+   ```
+4. Use `gallery: []` until you have images; the gallery section is hidden when empty.
 
-Use **`documentation_url`** for anything long-form recruiters should open separately: README PDF, architecture write-up, Notion page, Google Doc (share link), etc.
+## Full description (detail page)
+
+Add Markdown in **`description_en`** and **`description_de`** (multi-line with `|`):
+
+```yaml
+description_en: |
+  ChargeHubBerlin is a Streamlit app for exploring EV charging infrastructure in Berlin.
+
+  It combines geospatial views, filtering, and data quality checks backed by a large automated test suite.
+description_de: |
+  …
+```
+
+If both are empty, the detail page falls back to `summary_*` and `meta_*` from the card.
+
+## Documentation & slides
+
+**Option A — host on your site (PDF, etc.)**
+
+1. Put files in **`assets/docs/projects/`**, e.g. `assets/docs/projects/chargehub-report.pdf`.
+2. In YAML:
+   ```yaml
+   documentation_url: "/assets/docs/projects/chargehub-report.pdf"
+   ```
+
+**Option B — external link (Google Drive, Notion, Slides)**
 
 ```yaml
 documentation_url: "https://drive.google.com/file/d/…/view"
-```
-
-Leave `""` until the link exists; then the **Documentation / Dokumentation** button appears automatically on that card.
-
-## Presentations / slides
-
-Use **`presentation_url`** for slide decks:
-
-- Google Slides “Publish to web” or share link  
-- Speaker Deck, Canva, PowerPoint exported to PDF (hosted somewhere public)
-
-```yaml
 presentation_url: "https://docs.google.com/presentation/d/…"
 ```
 
-Again, use `""` until ready; then the **Slides / Folien** button shows.
+Leave `""` until ready; the **Documentation** / **Slides** buttons appear on the detail page (and on the card if you still have those buttons there).
 
-## Filters
+## Live demo & other links
 
-Each project has **`categories`** — a YAML list whose entries must match the filter **`id`** values (`freelance`, `coding`, `ai`, `data-science`, `personal`). Example:
+Use the **`links`** list on each project (shown on the detail page and previously on the card):
 
 ```yaml
-categories: [data-science, coding, personal]
+links:
+  - { label_en: "Live App", label_de: "Live-App", url: "https://…" }
+  - { label_en: "GitHub", label_de: "GitHub", url: "https://github.com/…" }
 ```
-
-To add a new filter type, extend the **`filters`** list at the top of `_data/portfolio.yml` **and** use the same `id` in project `categories`.
 
 ## Adding a new project
 
-Copy an existing entry under `projects:` and fill in:
+1. Copy an existing block under `projects:` in `_data/portfolio.yml` (include `description_*` and `gallery: []`).
+2. Add **`project/<slug>.html`** (copy an existing file in `project/` and change `permalink` + `project_slug`).
+3. Add thumbnail (and optional gallery folder + docs).
 
-- `slug` — short internal id (not shown on site)  
-- `categories`, `thumbnail`, `documentation_url`, `presentation_url`  
-- `title_en` / `title_de`, `summary_en` / `summary_de`, `meta_en` / `meta_de`  
-- `tech:` list (or `[]`)  
-- `links:` — list of `{ label_en, label_de, url }`
+## Filters
 
-After saving, build locally (`bundle exec jekyll serve`) or push to GitHub Pages to verify.
+Each project has **`categories`** — entries must match filter **`id`** values (`freelance`, `coding`, `ai`, `data-science`, `personal`). To add a filter, extend the **`filters`** list and use the new `id` in `categories`.

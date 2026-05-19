@@ -10,8 +10,8 @@ permalink: /projects/
       <span data-lang="de">Portfolio</span>
     </h1>
     <p class="portfolio-lede">
-      <span data-lang="en">Filter by type or open documentation and slides where available.</span>
-      <span data-lang="de">Nach Typ filtern — Dokumentation und Folien, sobald Links hinterlegt sind.</span>
+      <span data-lang="en">Filter by type, then open a project for the full write-up, gallery, and links.</span>
+      <span data-lang="de">Nach Typ filtern — Projekt öffnen für Beschreibung, Galerie und Links.</span>
     </p>
   </header>
 
@@ -30,20 +30,27 @@ permalink: /projects/
 
   <div class="portfolio-grid">
     {% for project in site.data.portfolio.projects %}
+      {% assign detail_url = '/projects/' | append: project.slug | append: '/' | relative_url %}
       <article class="project-card card" data-categories="{{ project.categories | join: ' ' }}">
         <div class="project-card-media">
           {% assign thumb = project.thumbnail | strip %}
           {% if thumb != "" %}
-            <img src="{{ thumb | relative_url }}" alt="" class="project-card-thumb" loading="lazy" decoding="async" />
+            <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ project.title_en | escape }}">
+              <img src="{{ thumb | relative_url }}" alt="" class="project-card-thumb" loading="lazy" decoding="async" />
+            </a>
           {% else %}
-            <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
+            <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ project.title_en | escape }}">
+              <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
+            </a>
           {% endif %}
         </div>
 
         <div class="project-card-body">
           <h3 class="project-card-title">
-            <span data-lang="en">{{ project.title_en }}</span>
-            <span data-lang="de">{{ project.title_de }}</span>
+            <a href="{{ detail_url }}">
+              <span data-lang="en">{{ project.title_en }}</span>
+              <span data-lang="de">{{ project.title_de }}</span>
+            </a>
           </h3>
           <p>
             <span data-lang="en">{{ project.summary_en }}</span>
@@ -70,13 +77,23 @@ permalink: /projects/
           {% if doc != "" or slides != "" %}
             <div class="project-extra-links">
               {% if doc != "" %}
-                <a class="btn btn-ghost btn-sm project-doc-link" href="{{ doc }}" target="_blank" rel="noopener noreferrer">
+                {% if doc contains "://" %}
+                  {% assign doc_href = doc %}
+                {% else %}
+                  {% assign doc_href = doc | relative_url %}
+                {% endif %}
+                <a class="btn btn-ghost btn-sm project-doc-link" href="{{ doc_href }}" target="_blank" rel="noopener noreferrer">
                   <span data-lang="en">Documentation</span>
                   <span data-lang="de">Dokumentation</span>
                 </a>
               {% endif %}
               {% if slides != "" %}
-                <a class="btn btn-ghost btn-sm" href="{{ slides }}" target="_blank" rel="noopener noreferrer">
+                {% if slides contains "://" %}
+                  {% assign slides_href = slides %}
+                {% else %}
+                  {% assign slides_href = slides | relative_url %}
+                {% endif %}
+                <a class="btn btn-ghost btn-sm" href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">
                   <span data-lang="en">Slides</span>
                   <span data-lang="de">Folien</span>
                 </a>
@@ -85,13 +102,10 @@ permalink: /projects/
           {% endif %}
 
           <p class="project-main-links">
-            {% for link in project.links %}
-              {% unless forloop.first %}<span class="project-link-sep" aria-hidden="true"> · </span>{% endunless %}
-              <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
-                <span data-lang="en">{{ link.label_en }}</span>
-                <span data-lang="de">{{ link.label_de }}</span>
-              </a>
-            {% endfor %}
+            <a href="{{ detail_url }}">
+              <span data-lang="en">View project</span>
+              <span data-lang="de">Projekt ansehen</span>
+            </a>
           </p>
         </div>
       </article>

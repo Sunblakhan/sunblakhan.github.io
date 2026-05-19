@@ -1,0 +1,153 @@
+---
+layout: default
+---
+
+{% assign project = nil %}
+{% for p in site.data.portfolio.projects %}
+  {% if p.slug == page.project_slug %}
+    {% assign project = p %}
+  {% endif %}
+{% endfor %}
+
+{% if project == nil %}
+<article class="project-detail card">
+  <p class="portfolio-lede">Project not found.</p>
+  <p><a href="{{ '/projects/' | relative_url }}">← Portfolio</a></p>
+</article>
+{% else %}
+<article class="project-detail card">
+  <p class="project-back">
+    <a href="{{ '/projects/' | relative_url }}">
+      <span data-lang="en">← Back to portfolio</span>
+      <span data-lang="de">← Zurück zum Portfolio</span>
+    </a>
+  </p>
+
+  {% assign thumb = project.thumbnail | strip %}
+  {% if thumb != "" %}
+  <figure class="project-detail-hero">
+    <img
+      src="{{ thumb | relative_url }}"
+      alt=""
+      width="1200"
+      height="675"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </figure>
+  {% endif %}
+
+  <header class="project-detail-header">
+    <h1 class="project-detail-title">
+      <span data-lang="en">{{ project.title_en }}</span>
+      <span data-lang="de">{{ project.title_de }}</span>
+    </h1>
+
+    {% if project.tech.size > 0 %}
+    <ul class="inline-list project-tech" aria-label="Technologies">
+      {% for t in project.tech %}
+        <li class="pill">{{ t }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <div class="project-detail-actions">
+      {% for link in project.links %}
+        <a class="btn btn-sm" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+          <span data-lang="en">{{ link.label_en }}</span>
+          <span data-lang="de">{{ link.label_de }}</span>
+        </a>
+      {% endfor %}
+      {% assign doc = project.documentation_url | strip %}
+      {% assign slides = project.presentation_url | strip %}
+      {% if doc != "" %}
+        {% if doc contains "://" %}
+          {% assign doc_href = doc %}
+        {% else %}
+          {% assign doc_href = doc | relative_url %}
+        {% endif %}
+        <a class="btn btn-ghost btn-sm" href="{{ doc_href }}" target="_blank" rel="noopener noreferrer">
+          <span data-lang="en">Documentation</span>
+          <span data-lang="de">Dokumentation</span>
+        </a>
+      {% endif %}
+      {% if slides != "" %}
+        {% if slides contains "://" %}
+          {% assign slides_href = slides %}
+        {% else %}
+          {% assign slides_href = slides | relative_url %}
+        {% endif %}
+        <a class="btn btn-ghost btn-sm" href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">
+          <span data-lang="en">Slides</span>
+          <span data-lang="de">Folien</span>
+        </a>
+      {% endif %}
+    </div>
+  </header>
+
+  {% assign den = project.description_en | strip %}
+  {% assign dde = project.description_de | strip %}
+  {% if den != "" or dde != "" %}
+  <div class="project-detail-body post-prose">
+    <div data-lang="en">{{ project.description_en | markdownify }}</div>
+    <div data-lang="de">{{ project.description_de | markdownify }}</div>
+  </div>
+  {% else %}
+  <div class="project-detail-body post-prose">
+    <p data-lang="en">{{ project.summary_en }}</p>
+    <p data-lang="de">{{ project.summary_de }}</p>
+    {% assign men = project.meta_en | strip %}
+    {% assign mde = project.meta_de | strip %}
+    {% if men != "" or mde != "" %}
+    <p class="meta">
+      <span data-lang="en">{{ project.meta_en }}</span>
+      <span data-lang="de">{{ project.meta_de }}</span>
+    </p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if project.gallery.size > 0 %}
+  <section class="project-gallery-section" aria-labelledby="project-gallery-heading">
+    <h2 id="project-gallery-heading" class="project-gallery-heading">
+      <span data-lang="en">Gallery</span>
+      <span data-lang="de">Galerie</span>
+    </h2>
+    <ul class="project-gallery">
+      {% for item in project.gallery %}
+        {% assign src = item.src | default: item | strip %}
+        {% if src != "" %}
+        {% if src contains "://" %}
+          {% assign gallery_src = src %}
+        {% else %}
+          {% assign gallery_src = src | relative_url %}
+        {% endif %}
+        <li>
+          <figure class="project-gallery-item">
+            <a href="{{ gallery_src }}" target="_blank" rel="noopener noreferrer">
+              <img
+                src="{{ gallery_src }}"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="360"
+              />
+            </a>
+            {% assign cap_en = item.caption_en | strip %}
+            {% assign cap_de = item.caption_de | strip %}
+            {% if cap_en != "" or cap_de != "" %}
+            <figcaption>
+              <span data-lang="en">{{ item.caption_en }}</span>
+              <span data-lang="de">{{ item.caption_de }}</span>
+            </figcaption>
+            {% endif %}
+          </figure>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>
+{% endif %}

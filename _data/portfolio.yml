@@ -6,6 +6,10 @@
 # Blog taxonomy is separate: see _data/blog.yml
 #
 # Optional URLs: leave "" until you have a link (Google Drive, PDF, Slides, Notion, etc.)
+#
+# Detail pages: /projects/<slug>/ — see PORTFOLIO-ASSETS.md for gallery & docs folders.
+# description_en / description_de: full project write-up (Markdown). Shown on the detail page.
+# gallery: list of { src, caption_en, caption_de } — images under assets/img/projects/<slug>/
 
 filters:
   - id: all
@@ -31,8 +35,60 @@ projects:
   - slug: chargehub
     categories: [data-science, coding, personal]
     thumbnail: "/assets/img/projects/charging-hub-thumbnail.png"
-    documentation_url: ""
+    documentation_url: "/assets/docs/projects/Charging-hub-station-documentation.pdf"
     presentation_url: ""
+    description_en: |
+      **ChargeHubBerlin** is a Streamlit web application for exploring and managing electric-vehicle charging infrastructure across Berlin. The platform surfaces more than **1,800 charging stations** on an interactive map, with filters, utilization views, and community-driven feedback.
+
+      ### What it does
+
+      - **Search & explore** nearby stations with geospatial views and demand indicators.
+      - **Rate stations** — residents submit validated ratings; averages and reviews are published to all users.
+      - **Report malfunctions** — operators and admins are notified, reporters earn reward points, and status updates flow back to the community.
+      - **Suggest new locations** — users can propose sites and vote on suggestions.
+
+      ### How it is built
+
+      The system follows **Domain-Driven Design (DDD)** with two decoupled bounded contexts (rating and malfunction reporting), a shared authentication kernel, and role-based access for **Residents**, **Operators**, and **Admins**. The stack is **Python**, **Streamlit**, and **SQLite**, with a strong quality focus: **124 unit tests**, **~85% coverage**, and static analysis via **Qodana / PyCharm Inspect**.
+
+      Open the **live app** to try the UI, browse the **gallery** below for architecture diagrams, or download the **full project documentation (PDF)** for the complete write-up.
+    description_de: |
+      **ChargeHubBerlin** ist eine Streamlit-Webanwendung zur Erkundung und Verwaltung der E-Ladeinfrastruktur in Berlin. Die Plattform zeigt über **1.800 Ladestationen** auf einer interaktiven Karte — mit Filtern, Auslastungsansichten und Community-Feedback.
+
+      ### Funktionen
+
+      - **Suchen & erkunden** — Stationen in der Nähe, Geodaten-Ansichten und Nachfrageindikatoren.
+      - **Stationen bewerten** — validierte Bewertungen, Durchschnittswerte und veröffentlichte Reviews.
+      - **Störungen melden** — Benachrichtigung von Betreibern/Admins, Belohnungspunkte für Meldende, Status-Updates für alle Nutzer.
+      - **Neue Standorte vorschlagen** — Vorschläge einreichen und abstimmen.
+
+      ### Technische Umsetzung
+
+      **Domain-Driven Design (DDD)** mit zwei entkoppelten Bounded Contexts (Bewertung und Störungsmeldung), gemeinsamem Auth-Kernel und Rollen für **Residents**, **Operators** und **Admins**. Stack: **Python**, **Streamlit**, **SQLite** — plus **124 Unit-Tests**, **~85 % Abdeckung** und Qualitätschecks mit **Qodana / PyCharm Inspect**.
+
+      **Live-App** ausprobieren, in der **Galerie** Architektur-Diagramme ansehen oder die **vollständige Projektdokumentation (PDF)** herunterladen.
+    gallery:
+      - src: "/assets/img/projects/chargehub/img-11.drawio.png"
+        caption_en: "Use case diagram — ChargeHub Berlin system scope"
+        caption_de: "Anwendungsfalldiagramm — Systemumfang ChargeHub Berlin"
+      - src: "/assets/img/projects/chargehub/img-4.drawio.png"
+        caption_en: "Bounded context — rating vs. malfunction management"
+        caption_de: "Bounded Context — Bewertung vs. Störungsmanagement"
+      - src: "/assets/img/projects/chargehub/img-10.drawio.png"
+        caption_en: "Process flow — user feedback and malfunction handling"
+        caption_de: "Prozessfluss — Nutzerfeedback und Störungsbearbeitung"
+      - src: "/assets/img/projects/chargehub/img-1.drawio.png"
+        caption_en: "DDD layered architecture — charging station ratings"
+        caption_de: "DDD-Schichtenarchitektur — Ladestations-Bewertungen"
+      - src: "/assets/img/projects/chargehub/img-2.drawio.png"
+        caption_en: "DDD layered architecture — malfunction reporting"
+        caption_de: "DDD-Schichtenarchitektur — Störungsmeldungen"
+      - src: "/assets/img/projects/chargehub/img-3.drawio.png"
+        caption_en: "Sequence diagram — rating submission and visibility"
+        caption_de: "Sequenzdiagramm — Bewertung einreichen und Anzeige"
+      - src: "/assets/img/projects/chargehub/img-6.drawio.png"
+        caption_en: "Sequence diagram — malfunction report to resolution"
+        caption_de: "Sequenzdiagramm — Störungsmeldung bis zur Lösung"
     title_en: "ChargeHubBerlin EV Station Management"
     title_de: "ChargeHubBerlin – Verwaltung von EV-Ladestationen"
     summary_en: "A geospatial EV platform for monitoring and exploring 1,800+ charging stations across Berlin."
@@ -49,6 +105,9 @@ projects:
     thumbnail: "/assets/img/projects/Ecommerce-AOL-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
+    description_en: ""
+    description_de: ""
+    gallery: []
     title_en: "E-Commerce Digital Goods Analysis"
     title_de: "E-Commerce-Analyse digitaler Güter"
     summary_en: "Big-data analytics using Exasol and advanced SQL on 10M+ AOL search records."
@@ -64,6 +123,9 @@ projects:
     thumbnail: "/assets/img/projects/AI-Automation-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
+    description_en: ""
+    description_de: ""
+    gallery: []
     title_en: "AI-Powered Operations Automation"
     title_de: "KI-gestützte Operations-Automatisierung"
     summary_en: "Cross-platform workflow systems for lead scoring, customer support automation, and scheduling pipelines."
@@ -79,6 +141,9 @@ projects:
     thumbnail: "/assets/img/projects/Developers-link-hub.png"
     documentation_url: ""
     presentation_url: ""
+    description_en: ""
+    description_de: ""
+    gallery: []
     title_en: "Technical Portfolio Links"
     title_de: "Technische Portfolio-Links"
     summary_en: "Explore my repositories, snippets, and profile across developer platforms."
