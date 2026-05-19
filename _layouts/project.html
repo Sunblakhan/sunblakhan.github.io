@@ -122,9 +122,18 @@ layout: default
         {% else %}
           {% assign gallery_src = src | relative_url %}
         {% endif %}
+        {% assign cap_en = item.caption_en | strip %}
+        {% assign cap_de = item.caption_de | strip %}
         <li>
           <figure class="project-gallery-item">
-            <a href="{{ gallery_src }}" target="_blank" rel="noopener noreferrer">
+            <button
+              type="button"
+              class="project-gallery-trigger"
+              data-full-src="{{ gallery_src }}"
+              data-caption-en="{{ cap_en | escape }}"
+              data-caption-de="{{ cap_de | escape }}"
+              aria-label="{{ cap_en | default: 'View image' | escape }}"
+            >
               <img
                 src="{{ gallery_src }}"
                 alt=""
@@ -133,9 +142,7 @@ layout: default
                 width="640"
                 height="360"
               />
-            </a>
-            {% assign cap_en = item.caption_en | strip %}
-            {% assign cap_de = item.caption_de | strip %}
+            </button>
             {% if cap_en != "" or cap_de != "" %}
             <figcaption>
               <span data-lang="en">{{ item.caption_en }}</span>
@@ -147,7 +154,47 @@ layout: default
         {% endif %}
       {% endfor %}
     </ul>
+
+    <div class="gallery-lightbox" hidden aria-hidden="true">
+      <button type="button" class="gallery-lightbox__backdrop" data-lightbox-close tabindex="-1" aria-hidden="true"></button>
+      <div
+        class="gallery-lightbox__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="gallery-lightbox-heading"
+        tabindex="-1"
+      >
+        <p id="gallery-lightbox-heading" class="visually-hidden">
+          <span data-lang="en">Image gallery</span>
+          <span data-lang="de">Bildergalerie</span>
+        </p>
+        <button type="button" class="gallery-lightbox__close" data-lightbox-close>
+          <span class="visually-hidden" data-lang="en">Close gallery</span>
+          <span class="visually-hidden" data-lang="de">Galerie schließen</span>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev">
+          <span class="visually-hidden" data-lang="en">Previous image</span>
+          <span class="visually-hidden" data-lang="de">Vorheriges Bild</span>
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next">
+          <span class="visually-hidden" data-lang="en">Next image</span>
+          <span class="visually-hidden" data-lang="de">Nächstes Bild</span>
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+        <figure class="gallery-lightbox__figure">
+          <img class="gallery-lightbox__img" alt="" decoding="async" />
+          <figcaption class="gallery-lightbox__caption">
+            <span data-lang="en" class="gallery-lightbox__cap-en"></span>
+            <span data-lang="de" class="gallery-lightbox__cap-de"></span>
+          </figcaption>
+          <p class="gallery-lightbox__counter" aria-live="polite"></p>
+        </figure>
+      </div>
+    </div>
   </section>
+  <script defer src="{{ '/assets/js/project-gallery-lightbox.js?v=' | append: site.time | relative_url }}"></script>
   {% endif %}
 </article>
 {% endif %}
