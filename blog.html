@@ -10,12 +10,27 @@ permalink: /blog/
       <span data-lang="de">Blog</span>
     </h1>
     <p class="portfolio-lede">
-      <span data-lang="en">Filter by topic, or open a post to read the full story.</span>
-      <span data-lang="de">Nach Thema filtern — oder einen Beitrag öffnen und vollständig lesen.</span>
+      <span data-lang="en">Search by title or keyword, filter by topic, or open a post to read the full story.</span>
+      <span data-lang="de">Nach Titel oder Stichwort suchen, nach Thema filtern oder einen Beitrag öffnen.</span>
     </p>
   </header>
 
   {% if site.posts.size > 0 %}
+  <div class="portfolio-toolbar">
+    <label class="portfolio-search">
+      <span class="visually-hidden" data-lang="en">Search blog posts</span>
+      <span class="visually-hidden" data-lang="de">Blogbeiträge suchen</span>
+      <input
+        type="search"
+        class="portfolio-search-input"
+        autocomplete="off"
+        spellcheck="false"
+        data-placeholder-en="Search by title or keyword…"
+        data-placeholder-de="Nach Titel oder Stichwort suchen…"
+      />
+    </label>
+  </div>
+
   <div class="portfolio-filters" role="toolbar" aria-label="Blog category filters">
     {% for f in site.data.blog.filters %}
     <button
@@ -29,6 +44,11 @@ permalink: /blog/
     {% endfor %}
   </div>
 
+  <p class="portfolio-empty" hidden>
+    <span data-lang="en">No posts match your search. Try another keyword or filter.</span>
+    <span data-lang="de">Keine Beiträge gefunden. Anderes Stichwort oder einen anderen Filter wählen.</span>
+  </p>
+
   <div class="portfolio-grid blog-grid">
     {% for post in site.posts %}
     {% assign cat_raw = post.categories | join: " " | strip %}
@@ -36,7 +56,25 @@ permalink: /blog/
     {% if keys == blank %}
       {% assign keys = post.tags %}
     {% endif %}
-    <article class="project-card card" data-categories="{{ cat_raw | strip }}">
+    {% assign search_bits = post.title %}
+    {% assign search_bits = search_bits | append: ' ' | append: post.excerpt | strip_html %}
+    {% assign search_bits = search_bits | append: ' ' | append: cat_raw %}
+    {% if keys != blank and keys.size > 0 %}
+      {% assign keys_joined = keys | join: ' ' %}
+      {% assign search_bits = search_bits | append: ' ' | append: keys_joined %}
+    {% endif %}
+    {% for cat in post.categories %}
+      {% for f in site.data.blog.filters %}
+        {% if f.id == cat %}
+          {% assign search_bits = search_bits | append: ' ' | append: f.label_en | append: ' ' | append: f.label_de %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    <article
+      class="project-card card"
+      data-categories="{{ cat_raw }}"
+      data-search="{{ search_bits | strip | downcase }}"
+    >
       <div class="project-card-media">
         {% if post.image %}
         <a href="{{ post.url | relative_url }}" class="blog-thumb-link" aria-label="{{ post.title | escape }}">

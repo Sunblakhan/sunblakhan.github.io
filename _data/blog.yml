@@ -1,7 +1,8 @@
-# Blog-only taxonomy (toolbar + category pills on /blog/).
-# In each post’s front matter use the `id` values under `categories:` (YAML list).
+# Blog-only taxonomy (toolbar + search on /blog/).
+# In each post’s front matter, set categories: to filter `id` values below (exact slug).
+# Example: categories: [mystory, motivational, growth]
 #
-# Optional chips (not filtered by toolbar): keywords: [...]  or  tags: [...]
+# Optional for search: keywords: [...]  or  tags: [...]
 
 filters:
   - id: all
