@@ -1,65 +1,88 @@
 (function () {
   function normalize(s) {
-    return (s || "").toLowerCase().trim();
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function getActiveFilterId(page) {
+    var active = page.querySelector(".portfolio-filters [data-filter].is-active");
+    if (!active) return "all";
+    return active.getAttribute("data-filter") || "all";
+  }
+
+  function cardCategories(card) {
+    var raw = card.getAttribute("data-categories") || "";
+    return raw.split(/\s+/).filter(Boolean);
   }
 
   function cardMatchesCategory(card, filterId) {
-    if (filterId === "all") return true;
-    var raw = card.getAttribute("data-categories") || "";
-    var cats = raw.split(/\s+/).filter(Boolean);
-    return cats.indexOf(filterId) !== -1;
+    if (!filterId || filterId === "all") return true;
+    return cardCategories(card).indexOf(filterId) !== -1;
+  }
+
+  function cardSearchHaystack(card) {
+    var fromAttr = card.getAttribute("data-search");
+    if (fromAttr) return normalize(fromAttr);
+    return normalize(card.textContent);
   }
 
   function cardMatchesSearch(card, query) {
     if (!query) return true;
-    var hay = normalize(card.getAttribute("data-search"));
-    return hay.indexOf(query) !== -1;
+    return cardSearchHaystack(card).indexOf(query) !== -1;
+  }
+
+  function setCardVisible(card, show) {
+    card.classList.toggle("is-filtered-out", !show);
+    if (show) {
+      card.removeAttribute("hidden");
+    } else {
+      card.setAttribute("hidden", "");
+    }
   }
 
   function applyFilters(page) {
     var grid = page.querySelector(".portfolio-grid");
-    var searchInput = page.querySelector(".portfolio-search-input");
     if (!grid) return;
 
-    var filterId =
-      (page.querySelector(".portfolio-filters [data-filter].is-active") || {}).getAttribute(
-        "data-filter"
-      ) || "all";
+    var filterId = getActiveFilterId(page);
+    var searchInput = page.querySelector(".portfolio-search-input");
     var query = searchInput ? normalize(searchInput.value) : "";
 
     var visible = 0;
     grid.querySelectorAll(".project-card").forEach(function (card) {
       var show =
         cardMatchesCategory(card, filterId) && cardMatchesSearch(card, query);
-      card.hidden = !show;
+      setCardVisible(card, show);
       if (show) visible += 1;
     });
 
     var empty = page.querySelector(".portfolio-empty");
     if (empty) {
-      empty.hidden = visible > 0;
+      empty.hidden = visible === 0;
     }
   }
 
   function bindPage(page) {
     var bar = page.querySelector(".portfolio-filters");
     var grid = page.querySelector(".portfolio-grid");
-    var searchInput = page.querySelector(".portfolio-search-input");
     if (!bar || !grid) return;
 
     bar.addEventListener("click", function (e) {
-      var btn = e.target.closest("[data-filter]");
-      if (!btn) return;
+      var btn = e.target.closest("button[data-filter]");
+      if (!btn || !bar.contains(btn)) return;
 
-      bar.querySelectorAll("[data-filter]").forEach(function (b) {
+      bar.querySelectorAll("button[data-filter]").forEach(function (b) {
         b.classList.toggle("is-active", b === btn);
       });
 
       applyFilters(page);
     });
 
+    var searchInput = page.querySelector(".portfolio-search-input");
     if (searchInput) {
       searchInput.addEventListener("input", function () {
+        applyFilters(page);
+      });
+      searchInput.addEventListener("search", function () {
         applyFilters(page);
       });
     }

@@ -1174,9 +1174,12 @@ html.site-lang-de [data-lang="en"] {
   overflow: hidden;
 }
 
+.project-card.is-filtered-out {
+  display: none !important;
+}
+
 .project-card--featured {
-  border-color: rgba(244, 114, 182, 0.45);
-  box-shadow: 0 0 0 1px rgba(244, 114, 182, 0.12), 0 12px 36px rgba(12, 4, 24, 0.55);
+  border-color: rgba(244, 114, 182, 0.38);
 }
 
 .project-featured-badge {
@@ -1201,12 +1204,6 @@ html.site-lang-de [data-lang="en"] {
   display: inline-block;
   margin: 0 0 0.5rem;
   vertical-align: middle;
-}
-
-@media (min-width: 900px) {
-  .portfolio-grid .project-card--featured {
-    grid-column: span 2;
-  }
 }
 
 .project-card-media {

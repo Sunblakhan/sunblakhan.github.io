@@ -1,16 +1,14 @@
 {% assign detail_url = '/projects/' | append: include.project.slug | append: '/' | relative_url %}
 {% assign p = include.project %}
 {% assign search_bits = p.title_en | append: ' ' | append: p.title_de | append: ' ' | append: p.summary_en | append: ' ' | append: p.summary_de | append: ' ' | append: p.slug %}
-{% if p.tech.size > 0 %}
-  {% assign search_bits = search_bits | append: ' ' | append: p.tech | join: ' ' %}
-{% endif %}
-{% if p.keywords and p.keywords.size > 0 %}
-  {% assign search_bits = search_bits | append: ' ' | append: p.keywords | join: ' ' %}
-{% endif %}
+{% if p.meta_en %}{% assign search_bits = search_bits | append: ' ' | append: p.meta_en %}{% endif %}
+{% if p.meta_de %}{% assign search_bits = search_bits | append: ' ' | append: p.meta_de %}{% endif %}
+{% if p.tech.size > 0 %}{% assign tech_joined = p.tech | join: ' ' %}{% assign search_bits = search_bits | append: ' ' | append: tech_joined %}{% endif %}
+{% if p.keywords %}{% assign kw_joined = p.keywords | join: ' ' %}{% assign search_bits = search_bits | append: ' ' | append: kw_joined %}{% endif %}
 <article
   class="project-card card{% if p.featured %} project-card--featured{% endif %}"
   data-categories="{{ p.categories | join: ' ' }}"
-  data-search="{{ search_bits | strip | downcase | escape }}"
+  data-search="{{ search_bits | strip | downcase }}"
 >
   <div class="project-card-media">
     {% if p.featured %}
