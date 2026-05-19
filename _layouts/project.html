@@ -40,6 +40,12 @@ layout: default
 
   <header class="project-detail-header">
     <h1 class="project-detail-title">
+      {% if project.featured %}
+      <span class="project-featured-badge project-featured-badge--detail">
+        <span data-lang="en">Featured project</span>
+        <span data-lang="de">Highlight-Projekt</span>
+      </span>
+      {% endif %}
       <span data-lang="en">{{ project.title_en }}</span>
       <span data-lang="de">{{ project.title_de }}</span>
     </h1>

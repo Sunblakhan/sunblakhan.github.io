@@ -10,10 +10,25 @@ permalink: /projects/
       <span data-lang="de">Portfolio</span>
     </h1>
     <p class="portfolio-lede">
-      <span data-lang="en">Filter by type, then open a project for the full write-up, gallery, and links.</span>
-      <span data-lang="de">Nach Typ filtern — Projekt öffnen für Beschreibung, Galerie und Links.</span>
+      <span data-lang="en">Search by name or keyword, filter by category, or open a project for the full write-up.</span>
+      <span data-lang="de">Nach Name oder Stichwort suchen, nach Kategorie filtern oder ein Projekt öffnen.</span>
     </p>
   </header>
+
+  <div class="portfolio-toolbar">
+    <label class="portfolio-search">
+      <span class="visually-hidden" data-lang="en">Search projects</span>
+      <span class="visually-hidden" data-lang="de">Projekte suchen</span>
+      <input
+        type="search"
+        class="portfolio-search-input"
+        autocomplete="off"
+        spellcheck="false"
+        data-placeholder-en="Search by title or keyword…"
+        data-placeholder-de="Nach Titel oder Stichwort suchen…"
+      />
+    </label>
+  </div>
 
   <div class="portfolio-filters" role="toolbar" aria-label="Portfolio filters">
     {% for f in site.data.portfolio.filters %}
@@ -28,87 +43,21 @@ permalink: /projects/
     {% endfor %}
   </div>
 
+  <p class="portfolio-empty" hidden>
+    <span data-lang="en">No projects match your search. Try another keyword or filter.</span>
+    <span data-lang="de">Keine Projekte gefunden. Anderes Stichwort oder einen anderen Filter wählen.</span>
+  </p>
+
   <div class="portfolio-grid">
     {% for project in site.data.portfolio.projects %}
-      {% assign detail_url = '/projects/' | append: project.slug | append: '/' | relative_url %}
-      <article class="project-card card" data-categories="{{ project.categories | join: ' ' }}">
-        <div class="project-card-media">
-          {% assign thumb = project.thumbnail | strip %}
-          {% if thumb != "" %}
-            <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ project.title_en | escape }}">
-              <img src="{{ thumb | relative_url }}" alt="" class="project-card-thumb" loading="lazy" decoding="async" />
-            </a>
-          {% else %}
-            <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ project.title_en | escape }}">
-              <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
-            </a>
-          {% endif %}
-        </div>
-
-        <div class="project-card-body">
-          <h3 class="project-card-title">
-            <a href="{{ detail_url }}">
-              <span data-lang="en">{{ project.title_en }}</span>
-              <span data-lang="de">{{ project.title_de }}</span>
-            </a>
-          </h3>
-          <p>
-            <span data-lang="en">{{ project.summary_en }}</span>
-            <span data-lang="de">{{ project.summary_de }}</span>
-          </p>
-          {% if project.tech.size > 0 %}
-            <ul class="inline-list project-tech">
-              {% for t in project.tech %}
-                <li class="pill">{{ t }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-          {% assign men = project.meta_en | strip %}
-          {% assign mde = project.meta_de | strip %}
-          {% if men != "" or mde != "" %}
-            <p class="meta project-meta">
-              <span data-lang="en">{{ project.meta_en }}</span>
-              <span data-lang="de">{{ project.meta_de }}</span>
-            </p>
-          {% endif %}
-
-          {% assign doc = project.documentation_url | strip %}
-          {% assign slides = project.presentation_url | strip %}
-          {% if doc != "" or slides != "" %}
-            <div class="project-extra-links">
-              {% if doc != "" %}
-                {% if doc contains "://" %}
-                  {% assign doc_href = doc %}
-                {% else %}
-                  {% assign doc_href = doc | relative_url %}
-                {% endif %}
-                <a class="btn btn-ghost btn-sm project-doc-link" href="{{ doc_href }}" target="_blank" rel="noopener noreferrer">
-                  <span data-lang="en">Documentation</span>
-                  <span data-lang="de">Dokumentation</span>
-                </a>
-              {% endif %}
-              {% if slides != "" %}
-                {% if slides contains "://" %}
-                  {% assign slides_href = slides %}
-                {% else %}
-                  {% assign slides_href = slides | relative_url %}
-                {% endif %}
-                <a class="btn btn-ghost btn-sm" href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">
-                  <span data-lang="en">Slides</span>
-                  <span data-lang="de">Folien</span>
-                </a>
-              {% endif %}
-            </div>
-          {% endif %}
-
-          <p class="project-main-links">
-            <a href="{{ detail_url }}">
-              <span data-lang="en">View project</span>
-              <span data-lang="de">Projekt ansehen</span>
-            </a>
-          </p>
-        </div>
-      </article>
+      {% if project.featured %}
+        {% include portfolio-project-card.html project=project %}
+      {% endif %}
+    {% endfor %}
+    {% for project in site.data.portfolio.projects %}
+      {% unless project.featured %}
+        {% include portfolio-project-card.html project=project %}
+      {% endunless %}
     {% endfor %}
   </div>
 </section>

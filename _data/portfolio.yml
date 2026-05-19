@@ -1,8 +1,10 @@
 # Portfolio projects for /projects/ — used by Jekyll Liquid.
 # How to add thumbnails & docs: see PORTFOLIO-ASSETS.md in the repo root.
 #
-# categories: slugs for portfolio cards only (space-separated on cards).
+# categories: slugs for portfolio cards (must match filter id values).
 #   freelance | coding | ai | data-science | personal
+# featured: true — highlighted card + badge on /projects/
+# keywords: optional extra terms for portfolio search (title/summary/tech are searched too)
 # Blog taxonomy is separate: see _data/blog.yml
 #
 # Optional URLs: leave "" until you have a link (Google Drive, PDF, Slides, Notion, etc.)
@@ -33,7 +35,9 @@ filters:
 
 projects:
   - slug: chargehub
-    categories: [data-science, coding, personal]
+    featured: true
+    categories: [data-science, coding]
+    keywords: [ChargeHub, Berlin, EV, Streamlit, academic, university]
     thumbnail: "/assets/img/projects/charging-hub-thumbnail.png"
     documentation_url: "/assets/docs/projects/Charging-hub-station-documentation.pdf"
     presentation_url: ""
@@ -101,7 +105,8 @@ projects:
       - { label_en: "GitHub", label_de: "GitHub", url: "https://github.com/Sunblakhan/Charging-Hub-Station" }
 
   - slug: bi-aol
-    categories: [data-science, coding, personal]
+    categories: [data-science, coding]
+    keywords: [AOL, ecommerce, Exasol, BI, academic, university, SQL]
     thumbnail: "/assets/img/projects/Ecommerce-AOL-thumbnail.png"
     documentation_url: ""
     presentation_url: "/assets/docs/projects/BI Presentation- Ecommerce.pptx"
@@ -175,6 +180,7 @@ projects:
 
   - slug: ai-ops
     categories: [ai, freelance]
+    keywords: [n8n, automation, ManyChat, HubSpot, Zapier, AI]
     thumbnail: "/assets/img/projects/AI-Automation-thumbnail.png"
     documentation_url: ""
     presentation_url: ""
@@ -192,7 +198,8 @@ projects:
       - { label_en: "Freelance profile", label_de: "Freelance-Profil", url: "https://www.upwork.com/freelancers/~0194eb36fd4f252888" }
 
   - slug: dev-links
-    categories: [coding, personal]
+    categories: [personal]
+    keywords: [GitHub, GitLab, snippets, profile, links]
     thumbnail: "/assets/img/projects/Developers-link-hub.png"
     documentation_url: ""
     presentation_url: ""

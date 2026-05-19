@@ -27,7 +27,7 @@ title: Home
 <section class="profile-panel">
   <div class="profile-copy">
     <h2><span data-lang="en">Why should you hire me?</span><span data-lang="de">Warum ich zu Ihrem Team passe</span></h2>
-    <p><span data-lang="en">I am a relentless problem-solver who bridges the gap between technical logic and business growth. My clients describe working with me as a 'no-brainer' because I don’t just complete tasks—I engineer solutions. With a foundation in Software Engineering and a Master’s focus in Data Science, I bring a unique hybrid skillset across development, automation, and operations. Whether I'm building 'scroll-stopping' content or complex data systems, I am dedicated to ensuring nothing falls through the cracks and every initiative is a success.</span><span data-lang="de">Ich löse Probleme konsequent und verbinde technische Logik mit Business-Wirkung. Kund:innen beschreiben die Zusammenarbeit mit mir oft als klare Entscheidung — ich liefere nicht nur Aufgaben ab, ich entwickle Lösungen. Mit Software Engineering als Basis und einem Master-Schwerpunkt Data Science kombiniere ich Entwicklung, Automatisierung und Operations. Ob Content oder komplexe Datensysteme: ich achte darauf, dass nichts unter den Tisch fällt und Initiativen wirklich tragen.</span></p>
+    <p><span data-lang="en">I am a relentless problem-solver who bridges the gap between technical logic and business growth. My clients describe working with me as a 'no-brainer' because I don’t just complete tasks, I engineer solutions. With a foundation in Software Engineering and a Master’s focus in Data Science, I bring a unique hybrid skillset across development, automation, and operations. Whether I'm building 'scroll-stopping' content or complex data systems, I am dedicated to ensuring nothing falls through the cracks and every initiative is a success.</span><span data-lang="de">Ich löse Probleme konsequent und verbinde technische Logik mit Business-Wirkung. Kund:innen beschreiben die Zusammenarbeit mit mir oft als klare Entscheidung, ich liefere nicht nur Aufgaben ab, ich entwickle Lösungen. Mit Software Engineering als Basis und einem Master-Schwerpunkt Data Science kombiniere ich Entwicklung, Automatisierung und Operations. Ob Content oder komplexe Datensysteme: ich achte darauf, dass nichts unter den Tisch fällt und Initiativen wirklich tragen.</span></p>
   </div>
 </section>
 
@@ -36,15 +36,15 @@ title: Home
   <div class="stats-grid">
     <article class="stat-card">
       <p class="stat-num">10M+</p>
-      <p class="stat-label"><span data-lang="en">Big Data Scale: AOL Records Analyzed & Modeled</span><span data-lang="de">Big Data: AOL-Datensätze analysiert & modelliert</span></p>
+      <p class="stat-label"><span data-lang="en">AOL Records Analyzed & Modeled</span><span data-lang="de"> AOL-Datensätze analysiert & modelliert</span></p>
     </article>
     <article class="stat-card">
       <p class="stat-num">70%</p>
-      <p class="stat-label"><span data-lang="en">Operational AI: Automation of Routine Workflows</span><span data-lang="de">Operations-KI: Automatisierung routinemäßiger Workflows</span></p>
+      <p class="stat-label"><span data-lang="en"> Automation of Routine Operational Workflows</span><span data-lang="de">Automatisierung routinemäßiger Operation Workflows</span></p>
     </article>
     <article class="stat-card">
       <p class="stat-num">85%</p>
-      <p class="stat-label"><span data-lang="en">Engineering Quality: Test Coverage in Production Apps</span><span data-lang="de">Softwarequalität: Testabdeckung in produktiven Apps</span></p>
+      <p class="stat-label"><span data-lang="en"> Test Coverage in Production Apps</span><span data-lang="de"> Testabdeckung in produktiven Apps</span></p>
     </article>
     <article class="stat-card">
       <p class="stat-num">35+</p>
@@ -52,7 +52,7 @@ title: Home
     </article>
     <article class="stat-card">
       <p class="stat-num">9+</p>
-      <p class="stat-label"><span data-lang="en">Proven Reliability: Years of Cross-Functional Project Delivery</span><span data-lang="de">Zuverlässigkeit: Jahre cross-funktionale Projektarbeit</span></p>
+      <p class="stat-label"><span data-lang="en"> Years of Cross-Functional Project Delivery</span><span data-lang="de">Jahre cross-funktionale Projektarbeit</span></p>
     </article>
   </div>
 </section>
@@ -235,7 +235,7 @@ title: Home
       <h3><span data-lang="en">Languages</span><span data-lang="de">Sprachen</span></h3>
       <ul>
         <li><span data-lang="en">English (C1)</span><span data-lang="de">Englisch (C1)</span></li>
-        <li><span data-lang="en">German (B1)</span><span data-lang="de">Deutsch (B1)</span></li>
+        <li><span data-lang="en">German (B1/B2)</span><span data-lang="de">Deutsch (B1/B2)</span></li>
         <li><span data-lang="en">Urdu/Hindi (Native)</span><span data-lang="de">Urdu/Hindi (Muttersprache)</span></li>
       </ul>
     </article>
@@ -263,7 +263,7 @@ title: Home
     </article>
     <article class="testimonial-card">
       <p class="testimonial-text">"Sun is a standout developer, virtual associate and brings a can-do attitude to every project and initiative. <strong>Highly recommends.</strong>"</p>
-      <p class="testimonial-source">- Upwork Review</p>
+      <p class="testimonial-source">- Upwork Review (5.0)</p>
     </article>
     <article class="testimonial-card">
       <p class="testimonial-text">"I had the pleasure of working closely with Sunbla Khan during my time at Kiddy School, and I cannot speak highly enough about her guidance and mentorship. Sunbla consistently demonstrated exceptional leadership and commitment to team growth."</p>

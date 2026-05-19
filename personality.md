@@ -8,16 +8,16 @@ permalink: /personality/
 <section class="person-dash-intro">
   <h1><span data-lang="en">Personality &amp; Collaboration Style</span><span data-lang="de">Persönlichkeit &amp; Arbeitsstil</span></h1>
   <p class="person-dash-lede">
-    <span data-lang="en">Think of this as a <strong>human data dashboard</strong>: how motivation, cognition, and communication actually show up in cross-functional teams — not buzzwords alone. I blend analytical precision (Architect) with development-focused leadership (Growth Coach).</span>
-    <span data-lang="de">Ein <strong>Human-Data-Dashboard</strong>: wie Motivation, Denken und Kommunikation in Teams wirken — nicht nur Schlagworte. Ich kombiniere analytische Schärfe (Architekt:in) mit entwicklungsorientierter Führung (Growth Coach).</span>
+    <span data-lang="en">Think of this as a <strong>human data dashboard</strong>: how motivation, cognition, and communication actually show up in cross-functional teams, not buzzwords alone. I blend analytical precision (Architect) with development-focused leadership (Growth Coach).</span>
+    <span data-lang="de">Ein <strong>Human-Data-Dashboard</strong>: wie Motivation, Denken und Kommunikation in Teams wirken, nicht nur Schlagworte. Ich kombiniere analytische Schärfe (Architekt:in) mit entwicklungsorientierter Führung (Growth Coach).</span>
   </p>
 </section>
 
 <section class="card trait-cloud-panel personality-card">
   <h2><span data-lang="en">Motivation &amp; drive (trait cloud)</span><span data-lang="de">Motivation &amp; Drive (Trait-Cloud)</span></h2>
   <p class="meta trait-cloud-caption">
-    <span data-lang="en">Bubble size mirrors percentile intensity — PrinciplesYou-informed snapshot.</span>
-    <span data-lang="de">Pillgröße spiegelt Perzentile — Auszug im Sinne von PrinciplesYou.</span>
+    <span data-lang="en">Bubble size mirrors percentile intensity, PrinciplesYou-informed snapshot.</span>
+    <span data-lang="de">Pillgröße spiegelt Perzentile, Auszug im Sinne von PrinciplesYou.</span>
   </p>
   <div class="trait-cloud">
     <span class="trait-pill" style="--pct: 95;"><span data-lang="en">Curious · 95%</span><span data-lang="de">Neugier · 95&nbsp;%</span></span>
@@ -41,13 +41,13 @@ permalink: /personality/
       </div>
     </div>
     <ul class="archetype-traits">
-      <li><span data-lang="en">Imaginative, tactical, and strategic — prefers structure with room to optimize.</span><span data-lang="de">Vorstellungskraft, Taktik, Strategie — Struktur plus Raum zur Optimierung.</span></li>
+      <li><span data-lang="en">Imaginative, tactical, and strategic, prefers structure with room to optimize.</span><span data-lang="de">Vorstellungskraft, Taktik, Strategie, Struktur plus Raum zur Optimierung.</span></li>
       <li><span data-lang="en">Comfortable refining details until a system behaves reliably.</span><span data-lang="de">Gern Details schärfen, bis sich Systeme verlässlich verhalten.</span></li>
     </ul>
     <p class="archetype-why">
       <strong><span data-lang="en">The “why”:</span><span data-lang="de">Das „Warum“:</span></strong>
-      <span data-lang="en"> Loves aligning creativity with rational frameworks — translating fuzzy goals into testable pipelines and automation.</span>
-      <span data-lang="de"> Kreative und rationale Ansätze verbinden — vage Ziele in testbare Pipelines und Automatisierung übersetzen.</span>
+      <span data-lang="en"> Loves aligning creativity with rational frameworks, translating fuzzy goals into testable pipelines and automation.</span>
+      <span data-lang="de"> Kreative und rationale Ansätze verbinden, vage Ziele in testbare Pipelines und Automatisierung übersetzen.</span>
     </p>
   </article>
 
@@ -67,7 +67,7 @@ permalink: /personality/
     </ul>
     <p class="archetype-why">
       <strong><span data-lang="en">The “why”:</span><span data-lang="de">Das „Warum“:</span></strong>
-      <span data-lang="en"> Motivated by people evolving through evidence-backed feedback—not generic cheerleading.</span>
+      <span data-lang="en"> Motivated by people evolving through evidence-backed feedback, not generic cheerleading.</span>
       <span data-lang="de"> Motiviert durch echte Weiterentwicklung mit konkretem Feedback statt Oberflächlichkeiten.</span>
     </p>
   </article>

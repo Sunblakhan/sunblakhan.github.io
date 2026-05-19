@@ -1,0 +1,97 @@
+{% assign detail_url = '/projects/' | append: include.project.slug | append: '/' | relative_url %}
+{% assign p = include.project %}
+{% assign search_bits = p.title_en | append: ' ' | append: p.title_de | append: ' ' | append: p.summary_en | append: ' ' | append: p.summary_de | append: ' ' | append: p.slug %}
+{% if p.tech.size > 0 %}
+  {% assign search_bits = search_bits | append: ' ' | append: p.tech | join: ' ' %}
+{% endif %}
+{% if p.keywords and p.keywords.size > 0 %}
+  {% assign search_bits = search_bits | append: ' ' | append: p.keywords | join: ' ' %}
+{% endif %}
+<article
+  class="project-card card{% if p.featured %} project-card--featured{% endif %}"
+  data-categories="{{ p.categories | join: ' ' }}"
+  data-search="{{ search_bits | strip | downcase | escape }}"
+>
+  <div class="project-card-media">
+    {% if p.featured %}
+    <span class="project-featured-badge">
+      <span data-lang="en">Featured project</span>
+      <span data-lang="de">Highlight-Projekt</span>
+    </span>
+    {% endif %}
+    {% assign thumb = p.thumbnail | strip %}
+    {% if thumb != "" %}
+      <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ p.title_en | escape }}">
+        <img src="{{ thumb | relative_url }}" alt="" class="project-card-thumb" loading="lazy" decoding="async" />
+      </a>
+    {% else %}
+      <a href="{{ detail_url }}" class="project-thumb-link" aria-label="{{ p.title_en | escape }}">
+        <div class="project-card-thumb project-card-thumb--placeholder" aria-hidden="true"></div>
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="project-card-body">
+    <h3 class="project-card-title">
+      <a href="{{ detail_url }}">
+        <span data-lang="en">{{ p.title_en }}</span>
+        <span data-lang="de">{{ p.title_de }}</span>
+      </a>
+    </h3>
+    <p>
+      <span data-lang="en">{{ p.summary_en }}</span>
+      <span data-lang="de">{{ p.summary_de }}</span>
+    </p>
+    {% if p.tech.size > 0 %}
+      <ul class="inline-list project-tech">
+        {% for t in p.tech %}
+          <li class="pill">{{ t }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% assign men = p.meta_en | strip %}
+    {% assign mde = p.meta_de | strip %}
+    {% if men != "" or mde != "" %}
+      <p class="meta project-meta">
+        <span data-lang="en">{{ p.meta_en }}</span>
+        <span data-lang="de">{{ p.meta_de }}</span>
+      </p>
+    {% endif %}
+
+    {% assign doc = p.documentation_url | strip %}
+    {% assign slides = p.presentation_url | strip %}
+    {% if doc != "" or slides != "" %}
+      <div class="project-extra-links">
+        {% if doc != "" %}
+          {% if doc contains "://" %}
+            {% assign doc_href = doc %}
+          {% else %}
+            {% assign doc_href = doc | relative_url %}
+          {% endif %}
+          <a class="btn btn-ghost btn-sm project-doc-link" href="{{ doc_href }}" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Documentation</span>
+            <span data-lang="de">Dokumentation</span>
+          </a>
+        {% endif %}
+        {% if slides != "" %}
+          {% if slides contains "://" %}
+            {% assign slides_href = slides %}
+          {% else %}
+            {% assign slides_href = slides | relative_url %}
+          {% endif %}
+          <a class="btn btn-ghost btn-sm" href="{{ slides_href }}" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Slides</span>
+            <span data-lang="de">Folien</span>
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <p class="project-main-links">
+      <a href="{{ detail_url }}">
+        <span data-lang="en">View project</span>
+        <span data-lang="de">Projekt ansehen</span>
+      </a>
+    </p>
+  </div>
+</article>

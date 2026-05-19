@@ -8,7 +8,7 @@ After you edit YAML or add images, commit and push so GitHub Pages rebuilds the 
 
 | What visitors see | Where it is configured |
 |-------------------|------------------------|
-| Card on `/projects/` (thumbnail, short summary) | `_data/portfolio.yml` — `summary_*`, `thumbnail`, `categories` |
+| Card on `/projects/` (thumbnail, short summary, filters, search) | `_data/portfolio.yml` — `summary_*`, `thumbnail`, `categories`, `keywords`, `featured` |
 | Full project page | Same YAML — `description_*`, `gallery`, `links`, `documentation_url`, `presentation_url` |
 | Page URL | `slug` field → `/projects/<slug>/` (wired by a small file in `project/<slug>.html`) |
 
@@ -91,6 +91,16 @@ links:
 2. Add **`project/<slug>.html`** (copy an existing file in `project/` and change `permalink` + `project_slug`).
 3. Add thumbnail (and optional gallery folder + docs).
 
-## Filters
+## Filters, search & featured
 
-Each project has **`categories`** — entries must match filter **`id`** values (`freelance`, `coding`, `ai`, `data-science`, `personal`). To add a filter, extend the **`filters`** list and use the new `id` in `categories`.
+Each project has **`categories`** — entries must match filter **`id`** values (`freelance`, `coding`, `ai`, `data-science`, `personal`). A project may use **multiple** categories.
+
+| Project type | Example | `categories` |
+|--------------|---------|----------------|
+| Academic (data + software) | ChargeHub, AOL BI | `[data-science, coding]` |
+| Freelance AI / automation | n8n ops | `[ai, freelance]` |
+| Personal link hubs | GitHub / GitLab card | `[personal]` |
+
+Set **`featured: true`** on one flagship project (badge + wider card). Optional **`keywords`** add extra terms for the search box on `/projects/`.
+
+To add a new filter chip, extend the **`filters`** list and use the same `id` in project `categories`.

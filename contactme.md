@@ -35,6 +35,6 @@ permalink: /contactme/
 
   <article class="card">
     <h3><span data-lang="en">Just Be Part of My World</span><span data-lang="de">Meine Welt auf Social Media</span></h3>
-    <p><span data-lang="en">For updates and casual connection, follow the links under <strong>Quick Links</strong> in the sidebar — LinkedIn, Instagram, and developer profiles are listed there.</span><span data-lang="de">Für Updates folgen Sie bitte den Links unter <strong>Schnellzugriff</strong> in der Seitenleiste — dort sind LinkedIn, Instagram und weitere Profile verlinkt.</span></p>
+    <p><span data-lang="en">For updates and casual connection, follow the links under <strong>Quick Links</strong> in the sidebar,  LinkedIn, Instagram, and developer profiles are listed there.</span><span data-lang="de">Für Updates folgen Sie bitte den Links unter <strong>Schnellzugriff</strong> in der Seitenleiste dort sind LinkedIn, Instagram und weitere Profile verlinkt.</span></p>
   </article>
 </div>
